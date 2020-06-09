@@ -99,11 +99,11 @@ body{
     border-radius: 25px;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px) {
     .left-side{
         display: none;
     }
     .right-panel{
-        width: 100%;
+        width: ;
     }
   }
