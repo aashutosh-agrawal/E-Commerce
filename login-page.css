@@ -20,6 +20,7 @@ body{
 
 }
 .left-side {
+    display: ;
     background-color: #00293B;
     width: 46.77%;
     height: 100%;
@@ -97,3 +98,12 @@ body{
     cursor: pointer;
     border-radius: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+    .left-side{
+        display: none;
+    }
+    .right-panel{
+        width: 100%;
+    }
+  }
