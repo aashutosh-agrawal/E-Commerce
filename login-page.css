@@ -20,17 +20,16 @@ body{
 
 }
 .left-side {
-    display: ;
-    background-color: #00293B;
+    background-color:lightblue;
     width: 46.77%;
     height: 100%;
     float: left;
 }
 .left-center-image {
-    width: 39.82%;
-    height: 74.62%;
-    margin-left: 29%;
-    margin-top: 13%;
+    width: 50.82%;
+    height: 90.62%;
+    margin-left: 20%;
+    margin-top: 10%;
     margin-bottom: 13%;
 }
 .left-center-image img{
@@ -46,49 +45,50 @@ body{
 .center-heading {
     color: #80949D;
     font-size: 30px;
-    margin-top: 19.18%;
+    margin-top: 8%;
     text-align: center;
     width: 100%;
     background-color: #F5F7FB;
 }
 .login-form{
-    margin-top: 10.46%;
-    margin-left: 19.12%;
-    width: 65.20%;
+    margin-top: 7%;
+    margin-left: 25%;
+    width: 50%;
 }
 .login-form label{
     color: #80949D;
-    font-size: 20px;
+    font-size: 16px;
 }
 .user-input{
     all: unset;
     padding: 2%;
     padding-left: 0%;
-    margin-bottom: 3%;
+    margin-bottom: 1.5%;
     width: 100%;
-    font-size: 24px;
+    font-size: 16px;
     border-bottom: 1px solid #80949D;
     color:#00293B;
 }
 ::placeholder { 
     color: #00293B;
-    opacity: 1; 
+    opacity: 1;
+    font-size: small; 
   }
 .login-form a{
     all: unset;
     color: #00293B;
     float: right;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
 }
 .login-form-button{
-    margin-top: 11.11%;
+    margin-top: 7%;
     width: 100%;
     text-align: center;
 }
 .login-form-button input{
     all:unset;
-    font-size: 28px;
+    font-size: 16px;
     background-color: #00293B;
     color: #F5F7FB;
     padding-top: 2%;
