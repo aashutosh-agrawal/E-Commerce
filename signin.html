@@ -22,19 +22,19 @@
                         ExpressDeals
                     </div>
                     <div class="login-form">
-                        <form action="#login" method="POST" onsubmit="return validateForm();">
+                        <form action="server.php" method="POST" onsubmit="return validateForm();">
                             <label for="name" class="label">Name</label></br>
-                            <input id="name" type="text" placeholder="Name" class="user-input" required ></br>
+                            <input id="name" type="text" placeholder="Name" class="user-input" name="name" required ></br>
                             <label for="username" class="label">Users name</label></br>
-                            <input id="username" type="text" placeholder="Username" class="user-input" required></br>
+                            <input id="username" type="text" placeholder="Username" class="user-input" name="username" required></br>
                             <label for="email" class="label">Email</label></br>
-                            <input id="email" type="email" placeholder="Email" class="user-input" required></br>
+                            <input id="email" type="email" placeholder="Email" class="user-input"  name="email" required></br>
                             <label for="mobileno" class="label">Mobile No.</label></br>
-                            <input id="mobileno" type="text" placeholder="Mobile No." class="user-input" required></br>
+                            <input id="mobileno" type="text" placeholder="Mobile No." class="user-input" name="mobileno" required></br>
                             <label for="password" class="label">Password</label></br>
-                            <input id="password" type="password" placeholder="Password" class="user-input" required></br>
+                            <input id="password" type="password" placeholder="Password" class="user-input" name="password" required></br>
                             <label for="confirmpassword" class="label">Confirm Password</label></br>
-                            <input id="confirmpassword" type="password" placeholder="Confirm Password" class="user-input" required></br>
+                            <input id="confirmpassword" type="password" placeholder="Confirm Password" class="user-input" name = "confirmpassword" required></br>
                              <a href="login.html" id="">Have an Account?</a></br>
                             <div class="login-form-button">
                                 <input type="submit" value="SignIn">
