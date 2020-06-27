@@ -52,7 +52,7 @@
 			var name = document.getElementById("name").value;
 			var pattern = /^[a-zA-Z ]{3,30}$/;
 			if(!name.match(pattern)) {
-				alert("Please enter a valid name. ex - James Bond");
+				console.log("Please enter a valid name. ex - James Bond");
 				return false;
 			}
 			return true;
@@ -61,7 +61,7 @@
 			var username = document.getElementById("username").value;
 			var pattern = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{3,20}$/;
 			if(!username.match(pattern)) {
-				alert("Please enter a valid username. ex - jbond007");
+				console.log("Please enter a valid username. ex - jbond007");
 				return false;
 			}
 			return true;
@@ -70,7 +70,7 @@
 			var email = document.getElementById("email").value;
 			var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			if(!email.match(pattern)) {
-				alert("Please enter a valid email. ex - jbond7@gmail.com");
+				console.log("Please enter a valid email. ex - jbond7@gmail.com");
 				return false;
 			}
 			return true;
@@ -79,7 +79,7 @@
 			var mobile = document.getElementById("mobileno").value;
 			var pattern = /^\d{10}$/;
 			if(!mobile.match(pattern)) {
-				alert("Please enter a valid 10 digit Mobile No. ex - 9912XXXX89");
+				console.log("Please enter a valid 10 digit Mobile No. ex - 9912XXXX89");
 				return false;
 			}
 			return true;
@@ -88,8 +88,8 @@
 			var password = document.getElementById("password").value;
 			var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 			if(!password.match(pattern)) {
-				//alert("Password must be of length 8-15 containing a small letter, a capital letter, a digit and a special character");
-				alert("Please set a strong password ex - James@007");
+				//console.log("Password must be of length 8-15 containing a small letter, a capital letter, a digit and a special character");
+				console.log("Please set a strong password ex - James@007");
 				return false;
 			}
 			return true;
@@ -98,12 +98,11 @@
 			var confirmpassword = document.getElementById("confirmpassword").value;
 			var password = document.getElementById("password").value;
 			if(password != confirmpassword) {
-				alert("Password and Confirm Password do not match");
+				console.log("Password and Confirm Password do not match");
 				return false;
 			}
 			return true;
 		}
-
 		// Final function to validate all the fields
 		function validateForm() {
 			if(validateName() && validateUsername() && validateEmail() && validateMobile() && validatePassword() && 
