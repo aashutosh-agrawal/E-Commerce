@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,16 +23,23 @@
                         ExpressDeals
                     </div>
                     <div class="login-form">
-                        <form action="logincheck.php">
+                        <form action="logincheck.php" method="POST">
                            
                             <label for="username" class="label">Users name</label></br>
-                            <input id="username" type="text" placeholder="Username" class="user-input" required></br>
+                            <input id="username" type="text" placeholder="username" class="user-input" name="username" required></br>
                             <label for="password" class="label">Password</label></br>
-                            <input id="password" type="password" placeholder="Password" class="user-input" required></br>
-                             <a href="signin.html" id="">Not Registered?</a></br>
+                            <input id="password" type="password" placeholder="password" class="user-input" name="password" required></br>
+                             <a href="signin.php" id="">Not Registered?</a></br>
                              <!-- <a href="#forgot-password" id="">Forgot Password?</a></br> -->
+							 <p style="color:red;"><?php
+							 if(isset($_SESSION['error']))
+							 {
+								echo $_SESSION['error'];
+								session_destroy();}
+							 ?>
+							 </p>
                             <div class="login-form-button">
-                                <input type="submit" value="Login">
+                                <input type="submit" name="checkl" value="Login">
                             </div>
                         </form>
                     </div>
