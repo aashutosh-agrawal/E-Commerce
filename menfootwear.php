@@ -122,8 +122,9 @@
         <h5 class="card-title">Men Loafers For Men</h5>
         <p class="card-text">TASSEL LOAFERS 734 FOREST TASSEL LOAFERS IN BURGUNDY BOX-CALF.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc1p1sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -136,8 +137,9 @@
         <h5 class="card-title">Knoos Loafers For Men  (Brown)</h5>
         <p class="card-text">Knoos Brown Synthetic Leather Casual Loafer Loafers For Men  (Brown).</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc1p2sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -151,8 +153,9 @@
       <h5 class="card-title">Copper Loafers</h5>
       <p class="card-text">Knoos Copper Synthetic Leather Casual Loafer Soft Footwear Brand Men's Casual Shoes.</p>
       <div class="container">
-        <a href="#" class="btn btn-dark">Cart</a>
-        <a href="#" class="btn btn-dark">Buy Now</a>
+	  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc1p3sm" name="productId"> View Item </button>
+ 		  </form>
         </div>
     </div>
   </div>
@@ -182,8 +185,9 @@
     <h5 class="card-title">Casual sneakers shoes for men Sneakers For Men  (White)</h5>
     <p class="card-text">Spring White Shoes Men Casual Shoes Male Sneakers Cool Street Men Shoes Brand Man Footwear KA793.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc2p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -196,8 +200,9 @@
     <h5 class="card-title">Hotstyle Sneakers For Men  (Black)</h5>
     <p class="card-text">CLYMB Casual Shoes Men Shark Design Bottom Platform Sneakers Men Mesh Breathable Shoes Male Mixed Colors Trainers Shoes for Mens The Best White Sneakers For Men.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc2p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -211,8 +216,9 @@
   <h5 class="card-title">Lace-up Sneakers</h5>
   <p class="card-text">pinstyle Outdoor Casual Light Weight Lace-up Sneakers Sneakers For Men Sneakers For Men Futurecraft 4D Sports Running Shoe Sneakers Men Casual Shoes Court Royale AC Genuine Leather Sneakers.</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc2p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -239,8 +245,9 @@
     <h5 class="card-title">Roadster Boots For Men  (Brown)</h5>
     <p class="card-text">Vintage Style Boots Men Shoes Casual Fashion Zipper Motorcycle Boots Shoes </p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc3p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -253,8 +260,9 @@
     <h5 class="card-title">Unistar Jungle Boots</h5>
     <p class="card-text">Oil Stain & Water Resistant- Extra Cushion InnerSole -Light Weight Trekking Shoes Boots For Men (OliveGreen) Boots For Men  (Multicolor).</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc3p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -268,8 +276,9 @@
   <h5 class="card-title">Warrior By Liberty (Olive) </h5>
   <p class="card-text"> Fashionable Retro Outdoor Casual High-Top Genuine Leather Boots Men Men''s Black Casual Ankle Lace-Up Boots</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc3p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -292,8 +301,9 @@
     <h5 class="card-title">Sparx Men Olive, Black Sandal</h5>
     <p class="card-text">Royal Flex Men Grey Sports Sandals.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc4p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -306,8 +316,9 @@
     <h5 class="card-title">Sparx Men Blue Sports Sandal</h5>
     <p class="card-text">Stylish flloter sandal, are to maximize your fashion. </p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc4p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -321,8 +332,9 @@
   <h5 class="card-title">Woodland Men Olive Sandal</h5>
   <p class="card-text">Pu Rocks Men Sandels Men's PU Brown Casual Outdoor Sandals and Floaters.</p>
   <div class="container">
-  <a href="#" class="btn btn-dark">Cart</a>
-  <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mfwc4p3sm" name="productId"> View Item </button>
+ 		  </form>
   </div>
 </div>
 </div>
