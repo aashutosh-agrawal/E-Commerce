@@ -122,8 +122,9 @@
         <h5 class="card-title">Shuberry Heels Sandal</h5>
         <p class="card-text">11cm High Heels Nude Colour Leather Shoe high heels crystal plein.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc1p1sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -136,8 +137,9 @@
         <h5 class="card-title">Shuberry Heels Sandal</h5>
         <p class="card-text">Shuberry Women Olive Heels Sandal.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc1p2sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -151,8 +153,9 @@
       <h5 class="card-title">Shuberry Women Tan Heels Sandal</h5>
       <p class="card-text">Strap Heels Platform Sandals Party Shoes For Women Wedding Pumps 16cm High Heels .</p>
       <div class="container">
-        <a href="#" class="btn btn-dark">Cart</a>
-        <a href="#" class="btn btn-dark">Buy Now</a>
+	  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc1p3sm" name="productId"> View Item </button>
+ 		  </form>
         </div>
     </div>
   </div>
@@ -182,8 +185,9 @@
     <h5 class="card-title">TOSHINA SHOES KING </h5>
     <p class="card-text">Women Casual Boots For Women Hemlock High Heels Ankle Boots, Women Ladies Booties Dress Boots Women Shoes Wedge Shoes.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc2p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -196,8 +200,9 @@
     <h5 class="card-title">Commander Boots For Women  (Brown)</h5>
     <p class="card-text">Women Casual Boots For Women Commander Women Brown Ankle length Boots,Round Toe Square Heels Boots.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc2p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -211,8 +216,9 @@
   <h5 class="card-title">MSC Boots For Women  (Brown)</h5>
   <p class="card-text">Dune London True Tan Leather Double Strap Knee High Boots,Women Ankle Boots Stylish Lace Platform Round Square Heels.</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc2p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -239,8 +245,9 @@
     <h5 class="card-title">COMUTORA Running Shoes For Women  (Blue)</h5>
     <p class="card-text">sport running shoes student hook loop breathable sneakers boys athletic shoes  Running shoes for girls stylish latest design new fashion.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc3p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -253,8 +260,9 @@
     <h5 class="card-title">Running Shoes For Women</h5>
     <p class="card-text">Asics AMPLICA Running Shoes For Women (Grey, Orange) Orbit Women's Pink Sports Shoes  Latest Casuals Shoes.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc3p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -268,8 +276,9 @@
   <h5 class="card-title">Columbus running shoes</h5>
   <p class="card-text"> Ruhi-04-GreyPink Running Shoes For Women Women Sneakers Mesh Running Shoes Girls students Female Leather Sports Outdoor Gym Breathable Non-slip fitness shoes -</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc3p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -292,8 +301,9 @@
     <h5 class="card-title">PKKART Women Multicolor Flats Sandal</h5>
     <p class="card-text"> New Women Casual Summer Flat Slippers Flip Flops Female Crystal Outside Shoes Girls Comfortable Woman Footwear.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc4p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -306,8 +316,9 @@
     <h5 class="card-title">GIBELLE Women Green Flats Sandal</h5>
     <p class="card-text">Daily Wear Gibelle Casual Flat Tan Sandals For Girls Women Multicolor Flats Sandal Aria Nica Pink Woven design Flats Sandals For Girls.it is very comfortable.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc4p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -321,8 +332,9 @@
   <h5 class="card-title">PKKART Women Beige Flats Sandal</h5>
   <p class="card-text">Sweet Girls' Summer Bowtie Flat Sandals with Ankle buckle Women's Low heel Casual Slides Jelly Sandals Fashion Beads Flowers Kids Heel Shoes Girls Wedge Dress Sandals .</p>
   <div class="container">
-  <a href="#" class="btn btn-dark">Cart</a>
-  <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wfwc4p3sm" name="productId"> View Item </button>
+ 		  </form>
   </div>
 </div>
 </div>
