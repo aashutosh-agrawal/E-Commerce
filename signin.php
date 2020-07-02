@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,9 +38,16 @@
                             <input id="password" type="password" placeholder="Password" class="user-input" name="password" required></br>
                             <label for="confirmpassword" class="label">Confirm Password</label></br>
                             <input id="confirmpassword" type="password" placeholder="Confirm Password" class="user-input" name = "confirmpassword" required></br>
-                             <a href="login.html" id="">Have an Account?</a></br>
+                             <a href="login.php" id="">Have an Account?</a></br>
+							 <p style="color:red;"><?php 
+									   if(isset($_SESSION['err']))
+									   {
+										echo $_SESSION['err'];
+									    session_destroy();
+										}?>
+								</p>
                             <div class="login-form-button">
-                                <input type="submit" value="SignIn">
+                                <input type="submit" name="checkreg" value="SignIn">
                             </div>
                         </form>
                     </div>
