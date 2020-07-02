@@ -122,8 +122,9 @@
         <h5 class="card-title">Mini Dress</h5>
         <p class="card-text">Floral Print Dress Casual Cute Solid V Neck Dalmatian Ruffle Trim Tie Boho Beach High Waist Mini Dresses Women Fit and Flare Multicolor Dress.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+          <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc1p1sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -136,8 +137,9 @@
         <h5 class="card-title">Vacation Halter Printed Sleeveless Dress</h5>
         <p class="card-text">Halter neck style sleeveless detachable waist gathered tiered skirt panels invisible back zip neck opening.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc1p2sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -151,8 +153,9 @@
       <h5 class="card-title">Selous Slip Mini Dress</h5>
       <p class="card-text">The Selous Slip Mini Dress Blue Daisy was made for a night out with the girls!! This mini dress will have you feeling fun and fresh on a warm summer's night.</p>
       <div class="container">
-        <a href="#" class="btn btn-dark">Cart</a>
-        <a href="#" class="btn btn-dark">Buy Now</a>
+	  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc1p3sm" name="productId"> View Item </button>
+ 		  </form>
         </div>
     </div>
   </div>
@@ -182,8 +185,9 @@
     <h5 class="card-title">Cut Out Crop Tank Top</h5>
     <p class="card-text">Dazzle this summer with this striped blue crop top from People. Crafted from pure cotton, this design features noodle straps. Team it with shorts and flats for a chic look .</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc2p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -196,8 +200,9 @@
     <h5 class="card-title">Mint for Spring – The Cutest Eyelet Top!</h5>
     <p class="card-text">It feels so fresh and happy especially when paired with white. This outfit is perfect for so many occasions Backless Printed Halter Dress For Vacation in Green.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc2p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -211,8 +216,9 @@
   <h5 class="card-title">Macy Fit And Flare Wrap Top Blue</h5>
   <p class="card-text">Featuring long bishop style sleeves, V-neckline that wraps under the bust and fastens with a ribbon tie at the side Print Cold Shoulder Top.</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc2p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -239,8 +245,9 @@
     <h5 class="card-title">Golden Bordered Peach Chakori Saree</h5>
     <p class="card-text">Collection of the Latest Banarasi Sarees to amp up your saree game Chakori Ethnic Chanderi Saree.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc3p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -253,8 +260,9 @@
     <h5 class="card-title">Ruffled Saree</h5>
     <p class="card-text">Steal the show with these gorgeous ruffled sarees. Ruffled saree ideas for wedding and more inspirations for wedding.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc3p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -268,8 +276,9 @@
   <h5 class="card-title">Gulzar Feriha Kurta </h5>
   <p class="card-text"> Adorned with tones of blue and green against the serenity of white, it comes embellished with delicate sequins work on the yoke.</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc3p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -292,8 +301,9 @@
     <h5 class="card-title">Cobain Pants</h5>
     <p class="card-text"> Lightweight suiting Optional chain accent Houndstooth plaid pattern pants.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc4p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -306,8 +316,9 @@
     <h5 class="card-title">Ribbon design Pants</h5>
     <p class="card-text">This pants feature a side pockets and letter print design.amde by natural synthetic comfortable design.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc4p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -321,8 +332,9 @@
   <h5 class="card-title">Streatwear Jumpsuit</h5>
   <p class="card-text">Red Camouflage Print Pockets Camo High Waisted Streetwear Long Jumpsuit High-Rise Checked Pants.</p>
   <div class="container">
-  <a href="#" class="btn btn-dark">Cart</a>
-  <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="wwc4p3sm" name="productId"> View Item </button>
+ 		  </form>
   </div>
 </div>
 </div>
