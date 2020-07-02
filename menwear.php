@@ -122,8 +122,9 @@
         <h5 class="card-title">Solid Men Hooded Black T-Shirt</h5>
         <p class="card-text">Liseaven Men T Shirt Man Long Sleeve Tshirt Solid Men Hooded Neck Black T-Shirt.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc1p1sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -136,8 +137,9 @@
         <h5 class="card-title">Color Block Men Hoody</h5>
         <p class="card-text">Fashion Men Brand Casual Men Sweatshirt Solid Color Hoodie Jaskets Male Hoodies.</p>
         <div class="container">
-          <a href="#" class="btn btn-dark">Cart</a>
-          <a href="#" class="btn btn-dark">Buy Now</a>
+		<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc1p2sm" name="productId"> View Item </button>
+ 		  </form>
           </div>
       </div>
     </div>
@@ -151,8 +153,9 @@
       <h5 class="card-title">Solid Men Round Neck Red T-Shirt</h5>
       <p class="card-text">The purple tree Men's Printed Cotton T-Shirt - 1 pc, Printed Cotton Tshirt for Men, Men Tshirt, Tshirt.</p>
       <div class="container">
-        <a href="#" class="btn btn-dark">Cart</a>
-        <a href="#" class="btn btn-dark">Buy Now</a>
+	  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc1p3sm" name="productId"> View Item </button>
+ 		  </form>
         </div>
     </div>
   </div>
@@ -182,8 +185,9 @@
     <h5 class="card-title">Men Printed Formal Spread Shirt</h5>
     <p class="card-text">Off Road Military Fashion Handsome Style Slim Fit Cotton Long-sleeved Men Shirt - Khaki M.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc2p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -196,8 +200,9 @@
     <h5 class="card-title">Men Solid Formal Spread Shirt</h5>
     <p class="card-text">Fashion Mesh Mens See Through Shirts Men Shirt Silk Sexy Floral Men's Casual Shirt long Sleeve Man Shirts Slim Fit Designer Dress. </p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc2p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -211,8 +216,9 @@
   <h5 class="card-title">Men Self Design Formal Spread Shirt</h5>
   <p class="card-text">Men's White Oxford Shirt in Stretch New Men's Shirts men Casual slim fit designer Print Camisa red/khaki/white/green Asian.</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc2p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -239,8 +245,9 @@
     <h5 class="card-title">Regular Fit Men Grey Cotton Blend Trousers</h5>
     <p class="card-text">Get the perfect blend of comfort and style by wearing these grey textured Slim Fit trousers from Allen Solly by Allen Solly..</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc3p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -253,8 +260,9 @@
     <h5 class="card-title">Peter England Blend Trousers</h5>
     <p class="card-text">Slim Fit Men Dark Blue Polyester Viscose Blend Trousers Regular Fit Men Pure Cotton Dark Blue Pure Cotton Trousers Regular Fit Men White Trousers.</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc3p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -268,8 +276,9 @@
   <h5 class="card-title">Raymond Blend Trousers </h5>
   <p class="card-text"> Raymond Slim Fit Men Blue Polyester Blend Trousers Slim Fit Men Black Cotton Blend Trousers Brooklyn Slim Fit Men Beige Cotton Linen Blend Trousers.</p>
   <div class="container">
-    <a href="#" class="btn btn-dark">Cart</a>
-    <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc3p3sm" name="productId"> View Item </button>
+ 		  </form>
     </div>
 </div>
 </div>
@@ -292,8 +301,9 @@
     <h5 class="card-title">COBIO MAN black Kurta</h5>
     <p class="card-text">COBIO MAN Men Solid Cotton Blend Asymmetric Kurta (Black).</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc4p1sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -306,8 +316,9 @@
     <h5 class="card-title">BENSTOKE Kurta</h5>
     <p class="card-text">BENSTOKE Men Solid Cotton Blend Frontslit Kurta (Orange) Men Solid Cotton Blend Asymmetric Kurta</p>
     <div class="container">
-      <a href="#" class="btn btn-dark">Cart</a>
-      <a href="#" class="btn btn-dark">Buy Now</a>
+	<form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc4p2sm" name="productId"> View Item </button>
+ 		  </form>
       </div>
   </div>
 </div>
@@ -321,8 +332,9 @@
   <h5 class="card-title">VERO LIE Kurta</h5>
   <p class="card-text">VERO LIE Men Solid Cotton Blend Straight Kurta (Light Blue) Men Solid Cotton Linen Blend Straight Kurta.</p>
   <div class="container">
-  <a href="#" class="btn btn-dark">Cart</a>
-  <a href="#" class="btn btn-dark">Buy Now</a>
+  <form action="product.php" method="POST">
+ 			<button class="btn btn-dark" type="submit" value="mwc4p3sm" name="productId"> View Item </button>
+ 		  </form>
   </div>
 </div>
 </div>
