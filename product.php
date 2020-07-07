@@ -31,8 +31,7 @@ $image = $prod[1];
 $name = $prod[2];
 $price = $prod[3];
 $size = $prod[4];
-$quantity = $prod[5];
-$description = $prod[6];
+$description = $prod[5];
 
 //-----------------------------------------------------Show the Details-------------------------------------------
 
@@ -129,33 +128,33 @@ $description = $prod[6];
     <br>
     <br>
     <div class="alert text-danger" align="center" role="alert">
-      <h1><b>Product name</b></h2>
+      <h1><b><?php echo $name; ?></b></h2>
   </div>
     
 
   <div class="container">
-    <div class="alert alert-dark" role="alert" style="margin-top: 50px">
+	<div class="alert alert-dark" role="alert" style="margin-top: 50px">
+	<form action="add_to_cart.php" method="POST">
         <p align="center">
             <a class="navbar-brand" >
               <img src="<?php echo $image; ?>" width="300" height="300" class="d-inline-block align-top" alt="" loading="lazy">
-            </a>
-       
-              
-         
+			</a>
           <p align="center"> 
           <tr> <td> Product:</td><td> <?php echo $name; ?></td></tr><br><br>
           <tr> <td>	Price:</td> <td><?php echo "Rs. ".$price; ?></td> </tr><br><br>
-					<tr> <td>Size: </td><td><select name="size"><option value="S">S</option>
-            <option value="M">M</option><option value="L">L</option></select></td> </tr><br><br>
-            
-					<tr> <td>Qunatity: </td><td><input type="number"></td> </tr><br><br>
+					<tr> <td>Size: </td><td><select name="size"><option value="s">S</option>
+            <option value="m">M</option><option value="l">L</option></select></td> </tr><br><br>
+			<tr> <td>Quantity: </td><td><select name="quantity"><option value="1">1</option>
+						<option value="2">2</option><option value="3">3</option><option value="4">4</option>
+						<option value="5">5</option><option value="6">6</option><option value="7">7</option>
+						<option value="8">8</option><option value="9">9</option><option value="10">10</option></select></td> </tr><br><br>
           <tr> <td>About: </td> <td><?php echo $description; ?></td> </tr><br><br>
-          <tr> <td> <button type="button" class="btn btn-outline-dark">Add to Cart</button> </td>  <td> <button type="button" class="btn btn-outline-dark">Buy Now</button> </td> </tr><br><br>
-          </p>
-        </p>
-
+		  <tr> <td> <button class="btn btn-outline-dark" type="submit" value="<?php echo $pid; ?>" name="Cart">Add to Cart</button></td> <td><button class="btn btn-outline-dark" type="submit" value="<?php echo $pid; ?>" name="Buy">Buy Now</button> </td> </tr><br><br>
+		  </p>
+		</p>
+		</form>
     </div>
-    </div>
+  </div>
 
 
 
@@ -166,4 +165,3 @@ $description = $prod[6];
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
-
