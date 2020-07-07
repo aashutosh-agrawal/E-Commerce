@@ -23,7 +23,7 @@ session_start();
                         ExpressDeals
                     </div>
                     <div class="login-form">
-                        <form action="logincheck.php" method="POST">
+                        <form action="backend/logincheck.php" method="POST">
                            
                             <label for="username" class="label">Users name</label></br>
                             <input id="username" type="text" placeholder="username" class="user-input" name="username" required></br>
