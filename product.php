@@ -5,7 +5,7 @@ $pid = $_POST["productId"];
 
 //------------------------------------------------------database connection---------------------------------------
 
-include("database_connection.php");
+include("backend/database_connection.php");
 
 //------------------------------------------------------checking the product table--------------------------------
 
@@ -134,7 +134,7 @@ $description = $prod[5];
 
   <div class="container">
 	<div class="alert alert-dark" role="alert" style="margin-top: 50px">
-	<form action="add_to_cart.php" method="POST">
+	<form action="backend/add_to_cart.php" method="POST">
         <p align="center">
             <a class="navbar-brand" >
               <img src="<?php echo $image; ?>" width="300" height="300" class="d-inline-block align-top" alt="" loading="lazy">
