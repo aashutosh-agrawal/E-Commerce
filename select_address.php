@@ -17,7 +17,7 @@ else {
 
 ?>
 
-	<form action="proceed_to_payment.php" method="POST" id="proceed">
+	<form action="backend/proceed_to_payment.php" method="POST" id="proceed">
 		<!-- Not a waste Form, Do not delete this. -->
 		<!-- Its Elements are below in the code using form attribute -->
 	</form>
