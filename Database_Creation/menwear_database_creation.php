@@ -1,6 +1,6 @@
 <?php
 //---------------------------------------------------database connection-------------------------------------------
-include("../database_connection.php");
+include("../backend/database_connection.php");
 
 $men_wear = "create table menwear(productId varchar(20) primary key, image varchar(200), name varchar(100), price varchar(10), size varchar(10), description varchar(200))";
 $con->query($men_wear);
