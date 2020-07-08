@@ -7,6 +7,7 @@ else {
 	include("database_connection.php");
 
 	$u = $_SESSION["username"];
+	date_default_timezone_set('Asia/Kolkata');
 	$date = date("Y-m-d h:i:sa");
 	$status = "Success";
 	$amount_query = $con->query("SELECT SUM(total_price) AS total from cart where username = '$u' ");
