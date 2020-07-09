@@ -134,10 +134,10 @@ else {
 
 			
 					<table>
-						<tr> <td rowspan="4"> <img src = "<?php echo $prod[1]; ?>" alt="product image" height="200px" width="200px"> </td> <td> <p align="center"><?php echo $prod[2]; ?></p> </td> </tr>
-						<tr> 																											   <td> <p align="center">Size: <?php echo $prod[4]; ?></p> </td> </tr>
-						<tr>																				  						  	   <td><p align="center"> Quantity: <?php echo $item[3]; ?></p> </td> </tr>
-						<tr> 																				   						 	   <td><p align="center"> Total Price: <?php $grand_total_price += $item[4]; echo $item[4]; ?></p> </td> </tr>
+						<tr> <td rowspan="4"> <img src = "<?php echo $prod[1]; ?>" alt="product image" height="200px" width="200px"> </td> <td> <?php echo $prod[2]; ?> </td> </tr>
+						<tr> 																											   <td> Size: <?php echo $prod[4]; ?></td> </tr>
+						<tr>																				  						  	   <td> Quantity: <?php echo $item[3]; ?> </td> </tr>
+						<tr> 																				   						 	   <td> Total Price: <?php $grand_total_price += $item[4]; echo $item[4]; ?> </td> </tr>
 					</table>
 					<div class="text-right">
 				<form action="backend/remove_from_cart.php" method="POST">
