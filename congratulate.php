@@ -89,8 +89,8 @@
 
     <br>
     <br>
-    <div class="alert text-danger" align="center" role="alert">
-      <h1><b>Congratulations!!</b></h2>
+    <div class="alert text-success" align="center" role="alert">
+      <h1><b>Congratulations!!</b></h1>
   </div>
     
 
