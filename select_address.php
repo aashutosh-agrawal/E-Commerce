@@ -95,13 +95,13 @@ else {
 			<input id="state" type="text" placeholder="State" class="user-input" name="state" required></br>
 			<!-- <button class="btn btn-dark" type="submit" value="address" name="add"> Add This Address </button>	 -->
 			<div class="login-form-button">
-                                <input type="submit" name="checkl" value="Add this Address" name="add">
+                                <input type="submit" value="Add this Address" name="add">
                             </div>
 			</form>
 		<!-- Go to the confirmation page	 -->
 		<!-- <button class="btn btn-dark" type="submit" form="proceed" value="success" name="proceed_to_payment"> Proceed To Payment </button> -->
 		<div class="login-form-button">
-                                <input type="submit" name="checkl" value="Proceed to payment" name="proceed_to_payment">
+                                <input type="submit" form="proceed" value="Proceed to payment" name="proceed_to_payment">
                             </div>
 	</div>
 	</div>
