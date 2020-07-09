@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Select An Address</title>
+    <meta charset="UTF-8">
+    <title>ExpressDeals/Select Address</title>
+    <link rel="stylesheet" href="css/address.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	</head>
 	<body>
+            <div class="left-side">
+                <div class="left-center-image">
+                    <img src="assets/k.svg" alt="">
+                </div>
+			</div>
+			<div class="right-panel">
+                    <div class="center-heading">
+                        ExpressDeals
+                    </div>
 
 <?php
 
@@ -26,7 +38,7 @@ else {
 	if(mysqli_num_rows($res) > 0) {
 ?>
 
-		<div>
+	<!-- <div class="right-panel">  -->
 			<p> Your previously saved addresses are: </p>
 			
 <?php		
@@ -35,7 +47,7 @@ else {
 
 			<!-- This prints the saved addresses if available -->
 
-			<div>
+			<div class="login-form">
 			<input type="radio" value="<?php echo $adr[0]; ?>" name="address" form="proceed">
 				<table>
 					<tr><td>Name: </td><td><?php echo $adr[2]; ?></td></tr>
@@ -47,21 +59,24 @@ else {
 					<tr><td>State: </td><td><?php echo $adr[8]; ?></td></tr>
 				</table>
 			<form action="backend/remove_address.php" method="POST">
- 				<button class="btn btn-dark" type="submit" value="<?php echo $adr[0]; ?>" name="remove"> Remove Address </button>
- 		  	</form>
-			</div>
+			<div class="login-form-button">
+				 <input type="submit" value="<?php echo $adr[0]; ?>" name="remove"> 
+		</div>
+			   </form>
+		</div>
+			
 
 <?php 		
 		}	
 ?>
-		</div>
+		<!-- </div> -->
 <?php
 	}
 ?>
 
 	<!-- To Enter Another Address which will be added to db and then page reloads with new address added-->
-
-		<div>
+	<!-- <div class="right-panel"> -->
+		<div class="login-form">
 			<form action="backend/add_address.php" method="POST">
 			<p> Add An Address <p>
 			<label for="name" class="label">Name</label></br>
@@ -78,14 +93,18 @@ else {
 			<input id="city" type="text" placeholder="City" class="user-input" name="city" required></br>
 			<label for="state" class="label">State</label></br>
 			<input id="state" type="text" placeholder="State" class="user-input" name="state" required></br>
-			<button class="btn btn-dark" type="submit" value="address" name="add"> Add This Address </button>	
+			<!-- <button class="btn btn-dark" type="submit" value="address" name="add"> Add This Address </button>	 -->
+			<div class="login-form-button">
+                                <input type="submit" name="checkl" value="Add this Address" name="add">
+                            </div>
 			</form>
-		</div>
-
-		<!-- Go to the confirmation page-->
-		
-		<button class="btn btn-dark" type="submit" form="proceed" value="success" name="proceed_to_payment"> Proceed To Payment </button>
-
+		<!-- Go to the confirmation page	 -->
+		<!-- <button class="btn btn-dark" type="submit" form="proceed" value="success" name="proceed_to_payment"> Proceed To Payment </button> -->
+		<div class="login-form-button">
+                                <input type="submit" name="checkl" value="Proceed to payment" name="proceed_to_payment">
+                            </div>
+	</div>
+	</div>
 <?php
 }
 ?>
