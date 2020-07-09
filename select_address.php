@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title><?php echo $name." -Item Description"; ?></title>
+    <title>Select Delivery Address</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -108,7 +108,11 @@ else {
 ?>
 
 	<!-- <div class="right-panel">  -->
-			<p align="center"> Your previously saved addresses are: </p>
+			<br>
+			<div class="alert text-secondary" align="center" role="alert">
+      			<h4><b>Your previously saved addresses are:</b></h4>
+	  		</div>
+			<!-- <p align="center"> Your previously saved addresses are: </p>-->
 			
 <?php		
 		while($adr = mysqli_fetch_array($res)) {	
@@ -159,7 +163,7 @@ else {
 		<div class="form-group row">
                         <label for="name" class="col-2 col-form-label">Name</label>
                         <div class="col-10">
-                            <input name='email' class="form-control" type="text" placeholder="Name" id="name">
+                            <input name='name' class="form-control" type="text" placeholder="Name" id="name">
                         </div>
                     </div>
 			<!-- <label for="name" class="label">Name</label></br>
