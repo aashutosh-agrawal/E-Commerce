@@ -39,7 +39,7 @@ else {
 ?>
 
 	<!-- <div class="right-panel">  -->
-			<p> Your previously saved addresses are: </p>
+			<p align="center"> Your previously saved addresses are: </p>
 			
 <?php		
 		while($adr = mysqli_fetch_array($res)) {	
