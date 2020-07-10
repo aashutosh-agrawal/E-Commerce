@@ -53,7 +53,7 @@ $description = $prod[5];
   <body>
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
           <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -110,11 +110,12 @@ $description = $prod[5];
 
       </nav>
 
-    <nav class="navbar navbar-light bg-danger justify-content-between ">
-      <a class="navbar-brand mx-auto" href="#">Men's Wear</a>
-      <a class="navbar-brand mx-auto" href="#">Women's Wear</a>
-      <a class="navbar-brand mx-auto" href="#">Men's FootWear</a>
-      <a class="navbar-brand mx-auto" href="#">WoMen's FootWear</a>
+    <nav class="navbar navbar-dark bg-dark text-light justify-content-between ">
+    <a class="navbar-brand mx-auto text-light" href="menwear.php"><b>Men's Wear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="womenwear.php"><b>Women's Wear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="kidswear.php"><b>Kid's Wear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="menfootwear.php"><b>Men's FootWear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="womenfootwear.php"><b>Women's FootWear</b></a>
       <form class="form-inline ">
         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button type="submit" class="btn btn-dark">

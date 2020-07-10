@@ -84,11 +84,11 @@
 
 
     <nav class="navbar navbar-light bg-dark justify-content-between ">
-      <a class="navbar-brand mx-auto text-light" href="#"><b>Men's Wear</b></a>
-      <a class="navbar-brand mx-auto text-light" href="#"><b>Women's Wear</b></a>
-      <a class="navbar-brand mx-auto text-light" href="#"><b>Kid's Wear</b></a>
-      <a class="navbar-brand mx-auto text-light" href="#"><b>Women's FootWear</b></a>
-      <a class="navbar-brand mx-auto text-light" href="#"><b>Men's FootWear</b></a>
+    <a class="navbar-brand mx-auto text-light" href="menwear.php"><b>Men's Wear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="womenwear.php"><b>Women's Wear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="kidswear.php"><b>Kid's Wear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="menfootwear.php"><b>Men's FootWear</b></a>
+      <a class="navbar-brand mx-auto text-light" href="womenfootwear.php"><b>Women's FootWear</b></a>
 
       <form class="form-inline ">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
