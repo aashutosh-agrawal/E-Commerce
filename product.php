@@ -5,11 +5,9 @@ $pid = $_POST["productId"];
 
 //------------------------------------------------------database connection---------------------------------------
 
-<<<<<<< HEAD
-include("database_connection.php");
-=======
+
 include("backend/database_connection.php");
->>>>>>> master
+
 
 //------------------------------------------------------checking the product table--------------------------------
 
@@ -116,7 +114,7 @@ $description = $prod[5];
       <a class="navbar-brand mx-auto" href="#">Men's Wear</a>
       <a class="navbar-brand mx-auto" href="#">Women's Wear</a>
       <a class="navbar-brand mx-auto" href="#">Men's FootWear</a>
-      <a class="navbar-brand mx-auto" href="#">Men's FootWear</a>
+      <a class="navbar-brand mx-auto" href="#">WoMen's FootWear</a>
       <form class="form-inline ">
         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button type="submit" class="btn btn-dark">
@@ -138,11 +136,9 @@ $description = $prod[5];
 
   <div class="container">
 	<div class="alert alert-dark" role="alert" style="margin-top: 50px">
-<<<<<<< HEAD
-	<form action="add_to_cart.php" method="POST">
-=======
+
 	<form action="backend/add_to_cart.php" method="POST">
->>>>>>> master
+
         <p align="center">
             <a class="navbar-brand" >
               <img src="<?php echo $image; ?>" width="300" height="300" class="d-inline-block align-top" alt="" loading="lazy">
