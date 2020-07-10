@@ -1,45 +1,3 @@
-<?php
-if(!isset($_POST['productId'])) 
-	header("location:womenwear.php");
-$pid = $_POST["productId"];
-
-//------------------------------------------------------database connection---------------------------------------
-
-<<<<<<< HEAD
-include("database_connection.php");
-=======
-include("backend/database_connection.php");
->>>>>>> master
-
-//------------------------------------------------------checking the product table--------------------------------
-
-$temp = " ".$pid;
-if(strpos($temp, "ww"))
-	$table = "womenwear";
-else if(strpos($temp, "mw"))
-	$table = "menwear";
-else if(strpos($temp, "wfw"))
-	$table = "womenfootwear";
-else if(strpos($temp, "mfw"))
-	$table = "menfootwear";
-else 
-	header("location:womenwear.php");
-
-//-------------------------------------------------------fetching all the details---------------------------------
-
-$sql_l = "SELECT * FROM $table WHERE productId='$pid'";
-$res = $con->query($sql_l);
-$prod = mysqli_fetch_array($res);
-
-$image = $prod[1];
-$name = $prod[2];
-$price = $prod[3];
-$size = $prod[4];
-$description = $prod[5];
-
-//-----------------------------------------------------Show the Details-------------------------------------------
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -50,7 +8,7 @@ $description = $prod[5];
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title><?php echo $name." -Item Description"; ?></title>
+    <title>Order Successful</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -131,36 +89,17 @@ $description = $prod[5];
 
     <br>
     <br>
-    <div class="alert text-danger" align="center" role="alert">
-      <h1><b><?php echo $name; ?></b></h2>
+    <div class="alert text-success" align="center" role="alert">
+      <h1><b>Congratulations!!</b></h1>
   </div>
     
 
   <div class="container">
 	<div class="alert alert-dark" role="alert" style="margin-top: 50px">
-<<<<<<< HEAD
-	<form action="add_to_cart.php" method="POST">
-=======
-	<form action="backend/add_to_cart.php" method="POST">
->>>>>>> master
         <p align="center">
-            <a class="navbar-brand" >
-              <img src="<?php echo $image; ?>" width="300" height="300" class="d-inline-block align-top" alt="" loading="lazy">
-			</a>
-          <p align="center"> 
-          <tr> <td> Product:</td><td> <?php echo $name; ?></td></tr><br><br>
-          <tr> <td>	Price:</td> <td><?php echo "Rs. ".$price; ?></td> </tr><br><br>
-					<tr> <td>Size: </td><td><select name="size"><option value="s">S</option>
-            <option value="m">M</option><option value="l">L</option></select></td> </tr><br><br>
-			<tr> <td>Quantity: </td><td><select name="quantity"><option value="1">1</option>
-						<option value="2">2</option><option value="3">3</option><option value="4">4</option>
-						<option value="5">5</option><option value="6">6</option><option value="7">7</option>
-						<option value="8">8</option><option value="9">9</option><option value="10">10</option></select></td> </tr><br><br>
-          <tr> <td>About: </td> <td><?php echo $description; ?></td> </tr><br><br>
-		  <tr> <td> <button class="btn btn-outline-dark" type="submit" value="<?php echo $pid; ?>" name="Cart">Add to Cart</button></td> <td><button class="btn btn-outline-dark" type="submit" value="<?php echo $pid; ?>" name="Buy">Buy Now</button> </td> </tr><br><br>
-		  </p>
+		Your Order has been Successfully Placed. <br>
+		We Currently don't have the payment method here. So enjoy your free order. ;-)
 		</p>
-		</form>
     </div>
   </div>
 

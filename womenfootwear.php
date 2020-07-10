@@ -30,6 +30,7 @@
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
                     <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+
                   </li>
 
               </ul>
@@ -54,6 +55,7 @@
                             <a class="dropdown-item" href="#">Notification</a>
                              <a class="dropdown-item" href="#">Wishlist</a>
                              <a class="dropdown-item" href="#">Logout</a>
+
                       </li>
 
 
@@ -77,12 +79,14 @@
 
       </nav>
 
+
     <nav class="navbar navbar-light bg-dark justify-content-between ">
       <a class="navbar-brand mx-auto text-light" href="#"><b>Men's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Women's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Kid's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Women's FootWear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Men's FootWear</b></a>
+
       <form class="form-inline ">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button type="submit" class="btn btn-dark">
@@ -100,12 +104,16 @@
 
 
 
+
   <div class="alert alert-light" role="alert">
 
 
 
 
+
+
   <div class="alert text-light" align="center" role="alert">
+
     <h3 style="color:hsl(355, 44%, 22%)"><i><b>Heels</b></i></h3>
     </div>
     <br>
@@ -115,7 +123,9 @@
     <div class="row">
       <div class="col-md-4">
 
+
     <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+
       <img class="card-img-top img-fluid img-thumbnail" src="assets/25.jpeg" >
       <div class="card-body">
         <h5 class="card-title">Shuberry Heels Sandal</h5>
@@ -131,6 +141,7 @@
 
     <div class="col-md-4">
     <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:35rem;">
+
       <img class="card-img-top img-fluid img-thumbnail" src="assets/26.jpeg">
       <div class="card-body">
         <h5 class="card-title">Shuberry Heels Sandal</h5>
@@ -138,6 +149,7 @@
         <div class="container">
 		<form action="product.php" method="POST">
  			<button class="btn btn-light" type="submit" value="wfwc1p2sm" name="productId"> View Item </button>
+
  		  </form>
           </div>
       </div>
@@ -146,7 +158,9 @@
 
 
   <div class="col-md-4">
+
   <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+
     <img class="card-img-top img-fluid img-thumbnail" src="assets/27.jpeg" alt="Selous Slip Mini Dress Blue Daisy">
     <div class="card-body">
       <h5 class="card-title">Shuberry Women Tan Heels Sandal</h5>
@@ -166,9 +180,11 @@
 
 
 
+
 <div class="alert alert-light" role="alert">
 
 <div class="alert text-light" align="center" role="alert">
+
   <h3 style="color:hsl(355, 44%, 22%)"><i><b>Boots</b></i></h3>
   </div>
 <br>
@@ -177,7 +193,6 @@
 
 <div class="row">
   <div class="col-md-4">
-
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:37rem;">
   <a href="#"><img class="card-img-top img-fluid img-thumbnail" src="assets/28.jpeg"></a>
   <div class="card-body">
@@ -193,14 +208,18 @@
 </div>
 
 <div class="col-md-4">
+
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:37rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/29.jpeg">
   <div class="card-body">
     <h5 class="card-title">Commander Boots For Women  (Brown)</h5>
     <p class="card-text">Women Casual Boots For Women Commander Women Brown Ankle length Boots,Round Toe Square Heels Boots.</p>
     <div class="container">
 	<form action="product.php" method="POST">
+
  			<button class="btn btn-light" type="submit" value="wfwc2p2sm" name="productId"> View Item </button>
+
  		  </form>
       </div>
   </div>
@@ -209,7 +228,9 @@
 
 
 <div class="col-md-4">
+
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:37rem;">
+
 <img class="card-img-top img-fluid img-thumbnail" src="assets/30.jpeg">
 <div class="card-body">
   <h5 class="card-title">MSC Boots For Women  (Brown)</h5>
@@ -226,9 +247,11 @@
 </div>
 </div>
 
+
 <div class="alert alert-light" role="alert">
 
 <div class="alert text-light" align="center" role="alert">
+
   <h3 style="color:hsl(355, 44%, 22%)"><i><b>Sports Shoes</b></i></h3>
   </div>
 <br>
@@ -239,6 +262,7 @@
   <div class="col-md-4">
 
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/31.jpeg">
   <div class="card-body">
     <h5 class="card-title">COMUTORA Running Shoes For Women  (Blue)</h5>
@@ -254,13 +278,16 @@
 
 <div class="col-md-4">
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:35rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/32.jpeg">
   <div class="card-body">
     <h5 class="card-title">Running Shoes For Women</h5>
     <p class="card-text">Asics AMPLICA Running Shoes For Women (Grey, Orange) Orbit Women's Pink Sports Shoes  Latest Casuals Shoes.</p>
     <div class="container">
 	<form action="product.php" method="POST">
+
  			<button class="btn btn-light" type="submit" value="wfwc3p2sm" name="productId"> View Item </button>
+
  		  </form>
       </div>
   </div>
@@ -270,6 +297,7 @@
 
 <div class="col-md-4">
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+
 <img class="card-img-top img-fluid img-thumbnail" src="assets/33.jpeg">
 <div class="card-body">
   <h5 class="card-title">Columbus running shoes</h5>
@@ -286,13 +314,16 @@
 </div>
 </div>
 
+
 <div class="alert alert-light" role="alert">
 <div class="alert text-light" align="center" role="alert">
+
   <h3 style="color:hsl(355, 44%, 22%)"><i><b>Flats</b></i></h3>
   </div>
 <br>
 <div class="row">
   <div class="col-md-4">
+
 
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
   <img class="card-img-top img-fluid img-thumbnail" src="assets/34.jpeg">
@@ -310,6 +341,7 @@
 
 <div class="col-md-4">
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/35.jpeg">
   <div class="card-body">
     <h5 class="card-title">GIBELLE Women Green Flats Sandal</h5>
@@ -325,7 +357,9 @@
 
 
 <div class="col-md-4">
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
+<div class="card mrcard text-dark bg-white mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
 <img class="card-img-top img-fluid img-thumbnail" src="assets/36.jpeg">
 <div class="card-body">
   <h5 class="card-title">PKKART Women Beige Flats Sandal</h5>

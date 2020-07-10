@@ -19,7 +19,9 @@
     <body>
       <div class="container-fluid">
 
+
         <nav class="navbar navbar-expand-lg navbar-light bg-dark text-light">
+
 
           <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -30,6 +32,7 @@
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
                     <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+
                   </li>
 
               </ul>
@@ -54,6 +57,7 @@
                             <a class="dropdown-item" href="#">Notification</a>
                              <a class="dropdown-item" href="#">Wishlist</a>
                              <a class="dropdown-item" href="#">Logout</a>
+
                       </li>
 
 
@@ -83,6 +87,7 @@
       <a class="navbar-brand mx-auto text-light" href="#"><b>Kid's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Women's FootWear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Men's FootWear</b></a>
+
       <form class="form-inline ">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button type="submit" class="btn btn-dark">
@@ -91,6 +96,7 @@
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
     </nav>
+
 
 
 
@@ -110,17 +116,20 @@
 
 
 
+
     <br>
 
 
     <div class="row">
       <div class="col-md-4">
 
+
     <div class="card mrcard text-white bg-light mb-3 mx-auto" style="width: 15rem; height:40rem;">
       <img class="card-img-top img-fluid img-thumbnail" src="assets/11.jpeg" height="10%">
       <div class="card-body">
         <h5 class="card-title text-dark">Mini Dress</h5>
         <p class="card-text text-dark">Floral Print Dress Casual Cute Solid V Neck Dalmatian Ruffle Trim Tie Boho Beach High Waist Mini Dresses Women Fit and Flare Multicolor Dress.</p>
+
         <div class="container">
           <form action="product.php" method="POST">
  			<button class="btn btn-dark" type="submit" value="wwc1p1sm" name="productId"> View Item </button>
@@ -131,14 +140,18 @@
     </div>
 
     <div class="col-md-4">
+
     <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
       <img class="card-img-top img-fluid img-thumbnail" src="assets/12.jpeg" height="600" >
       <div class="card-body">
         <h5 class="card-title">Vacation Halter Printed Sleeveless Dress</h5>
         <p class="card-text">Halter neck style sleeveless detachable waist gathered tiered skirt panels invisible back zip neck opening.</p>
         <div class="container">
 		<form action="product.php" method="POST">
+
  			<button class="btn btn-light" type="submit" value="wwc1p2sm" name="productId"> View Item </button>
+
  		  </form>
           </div>
       </div>
@@ -147,11 +160,13 @@
 
 
   <div class="col-md-4">
+
   <div class="card mrcard text-white bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
     <img class="card-img-top img-fluid img-thumbnail" src="assets/1.jpeg" >
     <div class="card-body">
       <h5 class="card-title text-dark">Selous Slip Mini Dress</h5>
       <p class="card-text text-dark">The Selous Slip Mini Dress Blue Daisy was made for a night out with the girls!! This mini dress will have you feeling fun and fresh on a warm summer's night.</p>
+
       <div class="container">
 	  <form action="product.php" method="POST">
  			<button class="btn btn-dark" type="submit" value="wwc1p3sm" name="productId"> View Item </button>
@@ -167,11 +182,13 @@
 
 
 
+
 <div class="alert alert-light" role="alert">
   <div class="alert text-danger" align="center" role="alert">
     <h3 style="color:hsl(355, 44%, 22%)"><i><b>Tops</b></i></h3>
     </div>
      <br>
+
 
 
 <br>
@@ -181,7 +198,9 @@
 <div class="row">
   <div class="col-md-4">
 
+
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:45rem;">
+
   <a href="#"><img class="card-img-top img-fluid img-thumbnail" src="assets/8.jpg"></a>
   <div class="card-body">
     <h5 class="card-title">Cut Out Crop Tank Top</h5>
@@ -196,14 +215,18 @@
 </div>
 
 <div class="col-md-4">
+
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:45rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/9.jpg">
   <div class="card-body">
     <h5 class="card-title">Mint for Spring – The Cutest Eyelet Top!</h5>
     <p class="card-text">It feels so fresh and happy especially when paired with white. This outfit is perfect for so many occasions Backless Printed Halter Dress For Vacation in Green.</p>
     <div class="container">
 	<form action="product.php" method="POST">
+
  			<button class="btn btn-light" type="submit" value="wwc2p2sm" name="productId"> View Item </button>
+
  		  </form>
       </div>
   </div>
@@ -212,7 +235,9 @@
 
 
 <div class="col-md-4">
+
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:45rem;">
+
 <img class="card-img-top img-fluid img-thumbnail" src="assets/10.jpg">
 <div class="card-body">
   <h5 class="card-title">Macy Fit And Flare Wrap Top Blue</h5>
@@ -229,6 +254,7 @@
 </div>
 </div>
 
+
 <div class="alert alert-light" role="alert">
 
   <div class="alert text-danger" align="center" role="alert">
@@ -236,6 +262,7 @@
     </div>
      <br>
      <br>
+
 <br>
 
 
@@ -244,6 +271,7 @@
   <div class="col-md-4">
 
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/2.jpg">
   <div class="card-body">
     <h5 class="card-title">Golden Bordered Peach Chakori Saree</h5>
@@ -259,13 +287,16 @@
 
 <div class="col-md-4">
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/3.jpg">
   <div class="card-body">
     <h5 class="card-title">Ruffled Saree</h5>
     <p class="card-text">Steal the show with these gorgeous ruffled sarees. Ruffled saree ideas for wedding and more inspirations for wedding.</p>
     <div class="container">
 	<form action="product.php" method="POST">
+
  			<button class="btn btn-light" type="submit" value="wwc3p2sm" name="productId"> View Item </button>
+
  		  </form>
       </div>
   </div>
@@ -274,7 +305,9 @@
 
 
 <div class="col-md-4">
+
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
 <img class="card-img-top img-fluid img-thumbnail" src="assets/4.jpg">
 <div class="card-body">
   <h5 class="card-title">Gulzar Feriha Kurta </h5>
@@ -291,17 +324,20 @@
 </div>
 </div>
 
+
 <div class="alert alert-light" role="alert">
   <div class="alert text-danger" align="center" role="alert">
     <h3 style="color:hsl(355, 44%, 22%)"><i><b>Trousers</b></i></h3>
     </div>
      <br>
      <br>
+
 <br>
 <div class="row">
   <div class="col-md-4">
 
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/5.jpg">
   <div class="card-body">
     <h5 class="card-title">Cobain Pants</h5>
@@ -317,13 +353,16 @@
 
 <div class="col-md-4">
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
   <img class="card-img-top img-fluid img-thumbnail" src="assets/7.jpg">
   <div class="card-body">
     <h5 class="card-title">Ribbon design Pants</h5>
     <p class="card-text">This pants feature a side pockets and letter print design.amde by natural synthetic comfortable design.</p>
     <div class="container">
 	<form action="product.php" method="POST">
+
  			<button class="btn btn-light" type="submit" value="wwc4p2sm" name="productId"> View Item </button>
+
  		  </form>
       </div>
   </div>
@@ -332,7 +371,9 @@
 
 
 <div class="col-md-4">
+
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
+
 <img class="card-img-top img-fluid img-thumbnail" src="assets/6.jpg" >
 <div class="card-body">
   <h5 class="card-title">Streatwear Jumpsuit</h5>

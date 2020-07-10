@@ -25,7 +25,11 @@ session_start();
                         ExpressDeals
                     </div>
                     <div class="login-form">
+<<<<<<< HEAD
                         <form action="server.php" method="POST" onsubmit="return validateForm();">
+=======
+                        <form action="backend/server.php" method="POST" onsubmit="return validateForm();">
+>>>>>>> master
                             <label for="name" class="label">Name</label></br>
                             <input id="name" type="text" placeholder="Name" class="user-input" name="name" required ></br>
                             <label for="username" class="label">Users name</label></br>
@@ -45,7 +49,11 @@ session_start();
 										echo $_SESSION['err'];
 									    session_destroy();
 										}?>
+<<<<<<< HEAD
 								</p>
+=======
+							</p>
+>>>>>>> master
                             <div class="login-form-button">
                                 <input type="submit" name="checkreg" value="SignIn">
                             </div>

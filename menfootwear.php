@@ -19,7 +19,11 @@
     <body>
       <div class="container-fluid">
 
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+=======
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+>>>>>>> master
 
           <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -29,7 +33,11 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
+<<<<<<< HEAD
                     <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+=======
+                    <h1><strong> <a class="nav-link" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+>>>>>>> master
                   </li>
 
               </ul>
@@ -53,7 +61,10 @@
                             <a class="dropdown-item" href="#">Orders</a>
                             <a class="dropdown-item" href="#">Notification</a>
                              <a class="dropdown-item" href="#">Wishlist</a>
+<<<<<<< HEAD
                              <a class="dropdown-item" href="#">Logout</a>
+=======
+>>>>>>> master
                       </li>
 
 
@@ -77,12 +88,20 @@
 
       </nav>
 
+<<<<<<< HEAD
     <nav class="navbar navbar-light bg-dark justify-content-between ">
       <a class="navbar-brand mx-auto text-light" href="#"><b>Men's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Women's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Kid's Wear<</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Women's FootWear</b></a>
       <a class="navbar-brand mx-auto text-light" href="#"><b>Men's FootWear</b></a>
+=======
+    <nav class="navbar navbar-light bg-danger justify-content-between ">
+      <a class="navbar-brand mx-auto" href="#">Men's Wear</a>
+      <a class="navbar-brand mx-auto" href="#">Women's Wear</a>
+      <a class="navbar-brand mx-auto" href="#">Men's FootWear</a>
+      <a class="navbar-brand mx-auto" href="#">Men's FootWear</a>
+>>>>>>> master
       <form class="form-inline ">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button type="submit" class="btn btn-dark">
@@ -97,15 +116,29 @@
 
     <br>
     <br>
+<<<<<<< HEAD
 
 
 
   <div class="alert alert-light" role="alert">
+=======
+    <div class="alert text-danger" align="center" role="alert">
+      <h1><b>Men's FootWear</b></h2>
+    <br>
+  </div>
+
+
+  <div class="alert alert-danger" role="alert">
+>>>>>>> master
 
 
 
 
+<<<<<<< HEAD
   <div class="alert text-light" align="center" role="alert">
+=======
+  <div class="alert text-danger" align="center" role="alert">
+>>>>>>> master
     <h3 style="color:hsl(355, 44%, 22%)"><i><b>Loafers</b></i></h3>
     </div>
     <br>
@@ -115,7 +148,11 @@
     <div class="row">
       <div class="col-md-4">
 
+<<<<<<< HEAD
     <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:25rem;">
+=======
+    <div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:25rem;">
+>>>>>>> master
       <img class="card-img-top img-fluid img-thumbnail" src="assets/37.jpeg">
       <div class="card-body">
         <h5 class="card-title">Men Loafers For Men</h5>
@@ -130,14 +167,22 @@
     </div>
 
     <div class="col-md-4">
+<<<<<<< HEAD
     <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:25rem;">
+=======
+    <div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:25rem;">
+>>>>>>> master
       <img class="card-img-top img-fluid img-thumbnail" src="assets/38.jpeg">
       <div class="card-body">
         <h5 class="card-title">Knoos Loafers For Men  (Brown)</h5>
         <p class="card-text">Knoos Brown Synthetic Leather Casual Loafer Loafers For Men  (Brown).</p>
         <div class="container">
 		<form action="product.php" method="POST">
+<<<<<<< HEAD
  			<button class="btn btn-light" type="submit" value="mfwc1p2sm" name="productId"> View Item </button>
+=======
+ 			<button class="btn btn-dark" type="submit" value="mfwc1p2sm" name="productId"> View Item </button>
+>>>>>>> master
  		  </form>
           </div>
       </div>
@@ -146,7 +191,11 @@
 
 
   <div class="col-md-4">
+<<<<<<< HEAD
   <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:25rem;">
+=======
+  <div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:25rem;">
+>>>>>>> master
     <img class="card-img-top img-fluid img-thumbnail" src="assets/39.jpeg">
     <div class="card-body">
       <h5 class="card-title">Copper Loafers</h5>
@@ -166,9 +215,15 @@
 
 
 
+<<<<<<< HEAD
 <div class="alert alert-light" role="alert">
 
 <div class="alert text-light" align="center" role="alert">
+=======
+<div class="alert alert-danger" role="alert">
+
+<div class="alert text-danger" align="center" role="alert">
+>>>>>>> master
   <h3 style="color:hsl(355, 44%, 22%)"><i><b>Sneekers</b></i></h3>
   </div>
 <br>
@@ -178,7 +233,11 @@
 <div class="row">
   <div class="col-md-4">
 
+<<<<<<< HEAD
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:32rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:32rem;">
+>>>>>>> master
   <a href="#"><img class="card-img-top img-fluid img-thumbnail" src="assets/40.jpeg" ></a>
   <div class="card-body">
     <h5 class="card-title">Casual sneakers shoes for men Sneakers For Men  (White)</h5>
@@ -193,14 +252,22 @@
 </div>
 
 <div class="col-md-4">
+<<<<<<< HEAD
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:32rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:32rem;">
+>>>>>>> master
   <img class="card-img-top img-fluid img-thumbnail" src="assets/41.jpeg">
   <div class="card-body">
     <h5 class="card-title">Hotstyle Sneakers For Men  (Black)</h5>
     <p class="card-text">CLYMB Casual Shoes Men Shark Design Bottom Platform Sneakers Men Mesh Breathable Shoes Male Mixed Colors Trainers Shoes for Mens The Best White Sneakers For Men.</p>
     <div class="container">
 	<form action="product.php" method="POST">
+<<<<<<< HEAD
  			<button class="btn btn-light" type="submit" value="mfwc2p2sm" name="productId"> View Item </button>
+=======
+ 			<button class="btn btn-dark" type="submit" value="mfwc2p2sm" name="productId"> View Item </button>
+>>>>>>> master
  		  </form>
       </div>
   </div>
@@ -209,7 +276,11 @@
 
 
 <div class="col-md-4">
+<<<<<<< HEAD
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:32rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:32rem;">
+>>>>>>> master
 <img class="card-img-top img-fluid img-thumbnail" src="assets/42.jpeg">
 <div class="card-body">
   <h5 class="card-title">Lace-up Sneakers</h5>
@@ -226,9 +297,15 @@
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="alert alert-light" role="alert">
 
 <div class="alert text-light" align="center" role="alert">
+=======
+<div class="alert alert-danger" role="alert">
+
+<div class="alert text-danger" align="center" role="alert">
+>>>>>>> master
   <h3 style="color:hsl(355, 44%, 22%)"><i><b>Boots</b></i></h3>
   </div>
 <br>
@@ -238,7 +315,11 @@
 <div class="row">
   <div class="col-md-4">
 
+<<<<<<< HEAD
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:35rem;">
+>>>>>>> master
   <img class="card-img-top img-fluid img-thumbnail" src="assets/43.jpeg">
   <div class="card-body">
     <h5 class="card-title">Roadster Boots For Men  (Brown)</h5>
@@ -253,14 +334,22 @@
 </div>
 
 <div class="col-md-4">
+<<<<<<< HEAD
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:35rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:35rem;">
+>>>>>>> master
   <img class="card-img-top img-fluid img-thumbnail" src="assets/44.jpeg" >
   <div class="card-body">
     <h5 class="card-title">Unistar Jungle Boots</h5>
     <p class="card-text">Oil Stain & Water Resistant- Extra Cushion InnerSole -Light Weight Trekking Shoes Boots For Men (OliveGreen) Boots For Men  (Multicolor).</p>
     <div class="container">
 	<form action="product.php" method="POST">
+<<<<<<< HEAD
  			<button class="btn btn-light" type="submit" value="mfwc3p2sm" name="productId"> View Item </button>
+=======
+ 			<button class="btn btn-dark" type="submit" value="mfwc3p2sm" name="productId"> View Item </button>
+>>>>>>> master
  		  </form>
       </div>
   </div>
@@ -269,7 +358,11 @@
 
 
 <div class="col-md-4">
+<<<<<<< HEAD
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:35rem;">
+>>>>>>> master
 <img class="card-img-top img-fluid img-thumbnail" src="assets/45.jpeg" >
 <div class="card-body">
   <h5 class="card-title">Warrior By Liberty (Olive) </h5>
@@ -286,15 +379,24 @@
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="alert alert-light" role="alert">
 <div class="alert text-light" align="center" role="alert">
+=======
+<div class="alert alert-danger" role="alert">
+<div class="alert text-danger" align="center" role="alert">
+>>>>>>> master
   <h3 style="color:hsl(355, 44%, 22%)"><i><b>Floaters</b></i></h3>
   </div>
 <br>
 <div class="row">
   <div class="col-md-4">
 
+<<<<<<< HEAD
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:25rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:25rem;">
+>>>>>>> master
   <img class="card-img-top img-fluid img-thumbnail" src="assets/46.jpeg">
   <div class="card-body">
     <h5 class="card-title">Sparx Men Olive, Black Sandal</h5>
@@ -309,14 +411,22 @@
 </div>
 
 <div class="col-md-4">
+<<<<<<< HEAD
 <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:25rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:25rem;">
+>>>>>>> master
   <img class="card-img-top img-fluid img-thumbnail" src="assets/47.jpeg" >
   <div class="card-body">
     <h5 class="card-title">Sparx Men Blue Sports Sandal</h5>
     <p class="card-text">Stylish flloter sandal, are to maximize your fashion. </p>
     <div class="container">
 	<form action="product.php" method="POST">
+<<<<<<< HEAD
  			<button class="btn btn-light" type="submit" value="mfwc4p2sm" name="productId"> View Item </button>
+=======
+ 			<button class="btn btn-dark" type="submit" value="mfwc4p2sm" name="productId"> View Item </button>
+>>>>>>> master
  		  </form>
       </div>
   </div>
@@ -325,7 +435,11 @@
 
 
 <div class="col-md-4">
+<<<<<<< HEAD
 <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:25rem;">
+=======
+<div class="card mrcard text-white bg-danger mb-3 mx-auto" style="width: 15rem;height:25rem;">
+>>>>>>> master
 <img class="card-img-top img-fluid img-thumbnail" src="assets/48.jpeg" >
 <div class="card-body">
   <h5 class="card-title">Woodland Men Olive Sandal</h5>
