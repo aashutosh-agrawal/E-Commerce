@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION["username"]) || !isset($_POST["remove"]))
-	header("location:../womenwear.php");
+	header("location:../homepage.php");
 else {
 	$sr = $_POST["remove"];
 

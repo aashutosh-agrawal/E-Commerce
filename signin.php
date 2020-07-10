@@ -25,8 +25,6 @@ session_start();
                         ExpressDeals
                     </div>
                     <div class="login-form">
-                        <form action="server.php" method="POST" onsubmit="return validateForm();">
-
                         <form action="backend/server.php" method="POST" onsubmit="return validateForm();">
 
                             <label for="name" class="label">Name</label></br>

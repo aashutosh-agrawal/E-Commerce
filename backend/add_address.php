@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION["username"]) || !isset($_POST["add"]))
-	header("location:../womenwear.php");
+	header("location:../homepage.php");
 else {
 	$u = $_SESSION["username"];
 	$n = $_POST["name"];

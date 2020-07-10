@@ -8,14 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Order Successful</title>
+    <title>Order Placed</title>
   </head>
   <body>
     <div class="container-fluid">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-          <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
+          <a class="navbar-brand" href="homepage.php"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
-                    <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+                    <h1><strong> <a class="nav-link text-light" href="homepage.php">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
                   </li>
 
               </ul>
@@ -43,9 +43,9 @@
                               <img src="assets/more.png" width="30" height="30"/>
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">My Profile</a>
-                            <a class="dropdown-item" href="#">Orders</a>
-                            <a class="dropdown-item" href="#">Logout</a>
+						  <a class="dropdown-item" href="my_orders.php">My Orders</a>
+						   <a class="dropdown-item" href="my_transactions.php">My Transactions</a>
+                            <a class="dropdown-item" href="backend/logout.php">Logout</a>
                       </li>
 
 

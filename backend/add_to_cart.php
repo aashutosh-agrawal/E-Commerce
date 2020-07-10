@@ -28,6 +28,8 @@ else {
 		$table = "womenfootwear";
 	else if(strpos($temp, "mfw"))
 		$table = "menfootwear";
+	else if(strpos($temp, "kw"))
+		$table = "kidswear";
 
 	//fetch the product details
 	$prod_det = $con->query("SELECT * FROM $table WHERE productId='$pid'");
@@ -49,7 +51,7 @@ else {
 	}
 
 	if(isset($_POST["Cart"])) {
-		header("location:../womenwear.php");
+		header("location:../homepage.php");
 		console.log("Added to Cart");
 	}
 	else {

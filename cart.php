@@ -5,7 +5,7 @@
      <!--all meta tags-->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width,initial-scale=1">
-     <title>Women wear</title>
+     <title>My Cart</title>
      <!--Bootstrap CSS and other CSS files-->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <!--Bootstrap JS and other JS files-->
@@ -23,7 +23,7 @@
        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-light">
 
 
-         <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
+         <a class="navbar-brand" href="homepage.php"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
          <div class="collapse navbar-collapse" id="navbarNav">
              <ul class="navbar-nav mx-auto">
                  <li class="nav-item active">
-                   <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+                   <h1><strong> <a class="nav-link text-light" href="homepage.php">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
 
                  </li>
 
@@ -52,9 +52,9 @@
                              <img src="assets/more.png" width="30" height="30"/>
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                           <a class="dropdown-item" href="#">My Profile</a>
-                           <a class="dropdown-item" href="#">Orders</a>
-                            <a class="dropdown-item" href="#">Logout</a>
+                           <a class="dropdown-item" href="my_orders.php">My Orders</a>
+						   <a class="dropdown-item" href="my_transactions.php">My Transactions</a>
+                            <a class="dropdown-item" href="backend/logout.php">Logout</a>
 
                      </li>
 
@@ -136,6 +136,8 @@ else {
 				$table = "womenfootwear";
 			else if(strpos($temp, "mfw"))
 				$table = "menfootwear";
+			else if(strpos($temp, "kw"))
+				$table = "kidswear";
 
 			//fetch the product details
 			$prod_det = $con->query("SELECT * FROM $table WHERE productId='$pid'");
@@ -160,7 +162,6 @@ else {
 <?php
 		}
 ?>
-		<!-- Cart Body Closes -->
 
 		<!-- Display the Cart's Total Amount -->
 		<br><br>
@@ -172,6 +173,7 @@ else {
  		  	</form>
 			</div>
 		</div>
+		<!-- Cart Body Closes -->
 		</div>
 		</div>
 		</div>
@@ -186,7 +188,7 @@ else {
 				<div class="alert alert-dark text-center" role="alert" style="margin-top: 50px">
 			<h5 class="text-info">The Shopping Cart Is Empty</h5>
 			<br>
-			<h5><a href = "womenwear.php" class="text-primary"> Continue Shopping </a></h5>
+			<h5><a href = "homepage.php" class="text-primary"> Continue Shopping </a></h5>
 		</div>
 		</div>
 

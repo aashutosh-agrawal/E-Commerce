@@ -45,7 +45,7 @@ if($con->query($s1))
  $s2="insert into login_details(username,password) values('$u','$ep')";
  $con->query($s2);
  $_SESSION['username']=$u;
- header("location:../womenwear.php");
+ header("location:../homepage.php");
 }
 else
 {

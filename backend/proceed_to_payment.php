@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION["username"]) || !isset($_POST["proceed_to_payment"]))
-	header("location:../womenwear.php");
+	header("location:../homepage.php");
 else {
 	include("database_connection.php");
 

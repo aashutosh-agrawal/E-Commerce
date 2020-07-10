@@ -16,7 +16,7 @@ $res_u = $con->query($sql_l);
 if(mysqli_num_rows($res_u) > 0) 
 {
 	$_SESSION['username']=$u;
-	header("location:../womenwear.php");
+	header("location:../homepage.php");
 }
 else
 {

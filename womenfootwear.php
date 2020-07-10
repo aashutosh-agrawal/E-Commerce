@@ -21,7 +21,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
 
-          <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
+          <a class="navbar-brand" href="homepage.php"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
-                    <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+                    <h1><strong> <a class="nav-link text-light" href="homepage.php">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
 
                   </li>
 
@@ -50,9 +50,9 @@
                               <img src="assets/more.png" width="30" height="30"/>
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">My Profile</a>
-                            <a class="dropdown-item" href="#">Orders</a>
-                             <a class="dropdown-item" href="#">Logout</a>
+						  <a class="dropdown-item" href="my_orders.php">My Orders</a>
+						   <a class="dropdown-item" href="my_transactions.php">My Transactions</a>
+                            <a class="dropdown-item" href="backend/logout.php">Logout</a>
 
                       </li>
 

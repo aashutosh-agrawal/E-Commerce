@@ -1,6 +1,6 @@
 <?php
 if(!isset($_POST['productId'])) 
-	header("location:womenwear.php");
+	header("location:homepage.php");
 $pid = $_POST["productId"];
 
 //------------------------------------------------------database connection---------------------------------------
@@ -20,8 +20,10 @@ else if(strpos($temp, "wfw"))
 	$table = "womenfootwear";
 else if(strpos($temp, "mfw"))
 	$table = "menfootwear";
+else if(strpos($temp, "kw"))
+	$table = "kidswear";
 else 
-	header("location:womenwear.php");
+	header("location:homepage.php");
 
 //-------------------------------------------------------fetching all the details---------------------------------
 
@@ -55,7 +57,7 @@ $description = $prod[5];
 
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-          <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
+          <a class="navbar-brand" href="homepage.php"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -63,7 +65,7 @@ $description = $prod[5];
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
-                    <h1><strong> <a class="nav-link" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+                    <h1><strong> <a class="nav-link text-light" href="homepage.php">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
                   </li>
 
               </ul>
@@ -83,10 +85,9 @@ $description = $prod[5];
                               <img src="assets/more.png" width="30" height="30"/>
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">My Profile</a>
-                            <a class="dropdown-item" href="#">Orders</a>
-                            <a class="dropdown-item" href="#">Notification</a>
-                             <a class="dropdown-item" href="#">Wishlist</a>
+						  <a class="dropdown-item" href="my_orders.php">My Orders</a>
+						   <a class="dropdown-item" href="my_transactions.php">My Transactions</a>
+                            <a class="dropdown-item" href="backend/logout.php">Logout</a>
                       </li>
 
 
@@ -96,7 +97,7 @@ $description = $prod[5];
 
 
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="cart.php">
                               <img src="assets/shopping-cart.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -130,7 +131,7 @@ $description = $prod[5];
 
     <br>
     <br>
-    <div class="alert text-danger" align="center" role="alert">
+    <div class="alert text-info" align="center" role="alert">
       <h1><b><?php echo $name; ?></b></h2>
   </div>
     
