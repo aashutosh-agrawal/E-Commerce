@@ -13,7 +13,7 @@
   <body>
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
           <a class="navbar-brand" href="#"> <img src="assets/k.svg" width="120" height="120" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item active">
-                    <h1><strong> <a class="nav-link" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
+                    <h1><strong> <a class="nav-link text-light" href="#">ExpressDeals <span class="sr-only">(current)</span></a></strong>  </h1>
                   </li>
 
               </ul>
@@ -45,8 +45,7 @@
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">My Profile</a>
                             <a class="dropdown-item" href="#">Orders</a>
-                            <a class="dropdown-item" href="#">Notification</a>
-                             <a class="dropdown-item" href="#">Wishlist</a>
+                             <a class="dropdown-item" href="#">Logout</a>
                       </li>
 
 
@@ -56,7 +55,7 @@
 
 
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="cart.php">
                               <img src="assets/shopping-cart.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -70,7 +69,8 @@
 
       </nav>
 
-    <nav class="navbar navbar-light bg-danger justify-content-between ">
+    <nav class="navbar navbar-light bg-dark justify-content-between ">
+      <a class="navbar-brand mx-auto text-light" href="homepage.php"><b>Home</b></a>
     <a class="navbar-brand mx-auto text-light" href="menwear.php"><b>Men's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="womenwear.php"><b>Women's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="kidswear.php"><b>Kid's Wear</b></a>
@@ -90,7 +90,7 @@
 <?php
 
 session_start();
-if(!isset($_SESSION["username"])) 
+if(!isset($_SESSION["username"]))
 	header("location:login.php");
 else {
 	include("backend/database_connection.php");
@@ -102,7 +102,7 @@ else {
 
 ?>
 
-		<div class="alert alert-dark" role="alert" style="margin-top: 30px">	
+		<div class="alert alert-dark" role="alert" style="margin-top: 30px">
 			<table>
 				<tr> <th> Sr. No. </th> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <th> Transaction Id. </th> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <th> Processed on </th> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <th> Amount Paid </th> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <th> Status </th> </tr>
 
@@ -112,7 +112,7 @@ else {
 
 ?>
 
-				<tr> <td> <?php echo $sr; ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo md5($transaction[0]); ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo $transaction[3]; ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo $transaction[2]; ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo $transaction[4]; ?> </td></tr>	
+				<tr> <td> <?php echo $sr; ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo md5($transaction[0]); ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo $transaction[3]; ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo $transaction[2]; ?> </td> <td>&nbsp; &nbsp;&nbsp; &nbsp;</td> <td> <?php echo $transaction[4]; ?> </td></tr>
 
 <?php
 	}
