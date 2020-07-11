@@ -108,32 +108,34 @@ $aut=$con->query($ut);
 	 <div class="container-fluid">
 
 
-	    <div class="row" style="margin-top:100px;">
+	<div class="row" style="margin-top:30px;">
 		<div class="col-md-3"></div>
-		<div class="col-md-6">
-                        <form action="backend/profile_edit.php" method="POST">
+		
+    <div class="col-md-6">
+      <form class="form-group" action="backend/profile_edit.php" method="POST">
 						<?php
 						$r = $aut->fetch_array();
 						?>
+
 						<div class="form-group">
 						<label for="name" class="label">Name</label>
-                            <input id="name" type="text" value="<?php echo $r[0]; ?>" class="user-input" name="name" class="form-control" required ></br>
+                            <input id="name" type="text" value="<?php echo $r[0]; ?>"  name="name" class="form-control" required ></br>
 							</div>
 						<div class="form-group">
                             <label for="email" class="label">Email</label>
-                            <input id="email" type="email" value="<?php echo $r[2]; ?>" class="user-input"  name="email" class="form-control" required></br>	
+                            <input id="email" type="email" value="<?php echo $r[2]; ?>"   name="email" class="form-control" required></br>	
 							</div>
 						<div class="form-group">
                             <label for="mobileno" class="label">Mobile No.</label>
-							<input id="mobileno" type="text" value="<?php echo $r[3]; ?>" class="user-input" name="mobileno" class="form-control" required></br>
+							<input id="mobileno" type="text" value="<?php echo $r[3]; ?>"  name="mobileno" class="form-control" required></br>
 							</div>
 						<div class="form-group">
 							<label for="name" class="label">Enter current Password</label>
-                            <input id="name" type="text" class="user-input" name="c_pass" class="form-control"></br>
+                            <input id="name" type="text" name="c_pass" class="form-control"></br>
 							</div>
 						<div class="form-group">
 							<label for="name" class="label">Enter New Password</label>
-                            <input id="name" type="text" class="user-input" name="n_pass" class="form-control"></br>
+                            <input id="name" type="text"  name="n_pass" class="form-control"></br>
 							</div>
 							<p style="color:red;"><?php
 									   if(isset($_SESSION['perr']))
