@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if(!isset($_SESSION["username"]))
+	header("location:login.php");
+else {
+	include("backend/database_connection.php");
+
+	$u = $_SESSION["username"];
+?>
+
 <!--HTML5 DECLARARTION-->
 <!DOCTYPE>
   <html lang="en" dir="ltr">
@@ -40,7 +51,7 @@
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -94,14 +105,6 @@
 
 
 <?php
-
-session_start();
-if(!isset($_SESSION["username"]))
-	header("location:login.php");
-else {
-	include("backend/database_connection.php");
-
-	$u = $_SESSION["username"];
 	$transactions = $con->query("SELECT * from transaction where username = '$u' ");
 	if(mysqli_num_rows($transactions) > 0) {
 		$sr = 0;

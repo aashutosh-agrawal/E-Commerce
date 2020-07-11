@@ -1,3 +1,14 @@
+<?php
+//-------------------------------------------------------------database connection-------------------------------------------
+include("backend/database_connection.php");
+session_start();
+if(isset($_SESSION['username']))
+{
+	$u=$_SESSION['username'];
+}
+?>
+
+
  <!--HTML5 DECLARARTION-->
   <!DOCTYPE>
   <html lang="en" dir="ltr">
@@ -37,7 +48,7 @@
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -100,7 +111,26 @@
 
     <br>
     <br>
+<?php
 
+$same="";
+$name="";
+$c=1;
+$d=1;
+$sel="select * from womenfootwear";
+$cat=$con->query($sel);
+while($rw=$cat->fetch_array())
+{
+	if ($d!=$c)
+	{
+		$d=$d+1;
+	}
+	else
+	{
+	if ($same!=$rw[2])
+	{
+		$same=$rw[2];
+	?>
 
 
 
@@ -113,264 +143,55 @@
 
   <div class="alert text-light" align="center" role="alert">
 
-    <h3 style="color:hsl(355, 44%, 22%)"><i><b>Heels</b></i></h3>
+    <h3 style="color:hsl(355, 44%, 22%)"><i><b><?php echo $rw[6]; ?></b></i></h3>
     </div>
     <br>
     <br>
 
 
     <div class="row">
+	<?php 
+	}
+	$st="select * from womenfootwear where category='$rw[6]'";
+	$sametab=$con->query($st);
+	$e=0;
+	while($rww=$sametab->fetch_array())
+	{
+		$c=$c+1;
+	if($name!=$rww[2])
+	{
+		$name=$rww[2];
+		$e=$e+1;
+		?>
       <div class="col-md-4">
 
 
-    <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
+    <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
 
-      <img class="card-img-top img-fluid img-thumbnail" src="assets/25.jpeg" >
+      <img class="card-img-top img-fluid img-thumbnail" src="<?php echo $rww[1]; ?>" >
       <div class="card-body">
-        <h5 class="card-title">Shuberry Heels Sandal</h5>
-        <p class="card-text">11cm High Heels Nude Colour Leather Shoe high heels crystal plein.</p>
+        <h5 class="card-title"><?php echo $rww[2]; ?></h5>
+        <p class="card-text"><?php echo $rww[5]; ?></p>
         <div class="container">
 		<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc1p1sm" name="productId"> View Item </button>
+ 			<button class="btn btn-dark" type="submit" value="<?php echo $rww[0]; ?>" name="productId"> View Item </button>
  		  </form>
           </div>
       </div>
     </div>
     </div>
-
-    <div class="col-md-4">
-    <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:35rem;">
-
-      <img class="card-img-top img-fluid img-thumbnail" src="assets/26.jpeg">
-      <div class="card-body">
-        <h5 class="card-title">Shuberry Heels Sandal</h5>
-        <p class="card-text">Shuberry Women Olive Heels Sandal.</p>
-        <div class="container">
-		<form action="product.php" method="POST">
- 			<button class="btn btn-light" type="submit" value="wfwc1p2sm" name="productId"> View Item </button>
-
- 		  </form>
-          </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-
-  <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
-
-    <img class="card-img-top img-fluid img-thumbnail" src="assets/27.jpeg" alt="Selous Slip Mini Dress Blue Daisy">
-    <div class="card-body">
-      <h5 class="card-title">Shuberry Women Tan Heels Sandal</h5>
-      <p class="card-text">Strap Heels Platform Sandals Party Shoes For Women Wedding Pumps 16cm High Heels .</p>
-      <div class="container">
-	  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc1p3sm" name="productId"> View Item </button>
- 		  </form>
-        </div>
-    </div>
-  </div>
+<?php 
+	}
+	if($e%3==0)
+	{
+		?><br>
+<?php
+	}
+	}
+	}?>    
 </div>
-
-</div>
-
-</div>
-
-
-
-
-<div class="alert alert-light" role="alert">
-
-<div class="alert text-light" align="center" role="alert">
-
-  <h3 style="color:hsl(355, 44%, 22%)"><i><b>Boots</b></i></h3>
-  </div>
-<br>
-
-
-
-<div class="row">
-  <div class="col-md-4">
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:37rem;">
-  <a href="#"><img class="card-img-top img-fluid img-thumbnail" src="assets/28.jpeg"></a>
-  <div class="card-body">
-    <h5 class="card-title">TOSHINA SHOES KING </h5>
-    <p class="card-text">Women Casual Boots For Women Hemlock High Heels Ankle Boots, Women Ladies Booties Dress Boots Women Shoes Wedge Shoes.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc2p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:37rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/29.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">Commander Boots For Women  (Brown)</h5>
-    <p class="card-text">Women Casual Boots For Women Commander Women Brown Ankle length Boots,Round Toe Square Heels Boots.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="wfwc2p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:37rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/30.jpeg">
-<div class="card-body">
-  <h5 class="card-title">MSC Boots For Women  (Brown)</h5>
-  <p class="card-text">Dune London True Tan Leather Double Strap Knee High Boots,Women Ankle Boots Stylish Lace Platform Round Square Heels.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc2p3sm" name="productId"> View Item </button>
- 		  </form>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<div class="alert alert-light" role="alert">
-
-<div class="alert text-light" align="center" role="alert">
-
-  <h3 style="color:hsl(355, 44%, 22%)"><i><b>Sports Shoes</b></i></h3>
-  </div>
-<br>
-
-
-
-<div class="row">
-  <div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/31.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">COMUTORA Running Shoes For Women  (Blue)</h5>
-    <p class="card-text">sport running shoes student hook loop breathable sneakers boys athletic shoes  Running shoes for girls stylish latest design new fashion.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc3p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:35rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/32.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">Running Shoes For Women</h5>
-    <p class="card-text">Asics AMPLICA Running Shoes For Women (Grey, Orange) Orbit Women's Pink Sports Shoes  Latest Casuals Shoes.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="wfwc3p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:35rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/33.jpeg">
-<div class="card-body">
-  <h5 class="card-title">Columbus running shoes</h5>
-  <p class="card-text"> Ruhi-04-GreyPink Running Shoes For Women Women Sneakers Mesh Running Shoes Girls students Female Leather Sports Outdoor Gym Breathable Non-slip fitness shoes -</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc3p3sm" name="productId"> View Item </button>
- 		  </form>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<div class="alert alert-light" role="alert">
-<div class="alert text-light" align="center" role="alert">
-
-  <h3 style="color:hsl(355, 44%, 22%)"><i><b>Flats</b></i></h3>
-  </div>
-<br>
-<div class="row">
-  <div class="col-md-4">
-
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/34.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">PKKART Women Multicolor Flats Sandal</h5>
-    <p class="card-text"> New Women Casual Summer Flat Slippers Flip Flops Female Crystal Outside Shoes Girls Comfortable Woman Footwear.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc4p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/35.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">GIBELLE Women Green Flats Sandal</h5>
-    <p class="card-text">Daily Wear Gibelle Casual Flat Tan Sandals For Girls Women Multicolor Flats Sandal Aria Nica Pink Woven design Flats Sandals For Girls.it is very comfortable.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-light" type="submit" value="wfwc4p2sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-white mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/36.jpeg">
-<div class="card-body">
-  <h5 class="card-title">PKKART Women Beige Flats Sandal</h5>
-  <p class="card-text">Sweet Girls' Summer Bowtie Flat Sandals with Ankle buckle Women's Low heel Casual Slides Jelly Sandals Fashion Beads Flowers Kids Heel Shoes Girls Wedge Dress Sandals .</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wfwc4p3sm" name="productId"> View Item </button>
- 		  </form>
-  </div>
-</div>
-</div>
-</div>
+<?php
+}?>
 </div>
 </div>
 </div>

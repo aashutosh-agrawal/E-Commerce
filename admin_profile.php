@@ -1,6 +1,10 @@
 <?php
 session_start();
 include("backend/database_connection.php");
+if(isset($_SESSION['username']))
+{
+	$u=$_SESSION['username'];
+}
 ?>
 
 <!--HTML5 DECLARARTION-->
@@ -41,7 +45,7 @@ include("backend/database_connection.php");
 
               <ul class="navbar-nav">
                      <li class="nav-item">
-                         <a class="nav-link" href="#">
+                         <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                              <img src="assets/log.png" width="30" height="30"/>
                          </a>
                      </li>
@@ -54,9 +58,9 @@ include("backend/database_connection.php");
                              <img src="assets/more.png" width="30" height="30"/>
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                           <a class="dropdown-item" href="#">My Profile</a>
-                           <a class="dropdown-item" href="#">Orders</a>
-                           <a class="dropdown-item" href="#">Logout</a>
+                           <a class="dropdown-item" href="my_orders.php">My Orders</a>
+						   <a class="dropdown-item" href="my_transactions.php">My Transactions</a>
+                            <a class="dropdown-item" href="backend/logout.php">Logout</a>
                      </li>
 
 

@@ -1,11 +1,21 @@
 <?php
 include("backend/database_connection.php");
 session_start();
+if(isset($_SESSION['category']))
+{
 $cat=$_SESSION['category'];
+}
+else if(isset($_SESSION['tab']))
+	$cat=$_SESSION['tab'];
+else
+{
+	$cat=$_POST['category'];
+	$_SESSION['category']=$cat;
+}
 $save= "select * from $cat";
 
 $rs= $con->query($save);
-	
+
 
 ?>
 
@@ -32,15 +42,15 @@ $rs= $con->query($save);
 <form action="backend/assets_remove.php" method="POST">
 <div class="container">
 <table class="table">
-<tr><td>Product Id</td><td>Url</td><td>Image</td><td>Name</td><td>Price</td><td>Size</td><td>Quantity</td><td>Description</td><td>Select</td></tr>
+<tr><td>Product Id</td><td>Category</td><td>Url</td><td>Image</td><td>Name</td><td>Price</td><td>Size</td><td>Description</td><td>Select</td></tr>
 <?php while($rw=$rs->fetch_array()) {
 	?>
-<tr><td><?php echo $rw[0];?></td><td><?php echo $rw[1];?></td><td><img src="<?php echo $rw[1];?>" height="200px" width="200px"></img></td><td><?php echo $rw[2];?></td><td><?php echo $rw[3];?></td><td><?php echo $rw[4];?></td><td><?php echo $rw[5];?></td><td><?php echo $rw[6];?></td><td><input type="checkbox" value="<?php echo $rw[0];?>" name="rev[]"></td></tr>
+<tr><td><?php echo $rw[0];?></td><td><?php echo $rw[6];?></td><td><?php echo $rw[1];?></td><td><img src="<?php echo $rw[1];?>" height="200px" width="200px"></img></td><td><?php echo $rw[2];?></td><td><?php echo $rw[3];?></td><td><?php echo $rw[4];?></td><td><?php echo $rw[5];?></td><td><input type="checkbox" value="<?php echo $rw[0];?>" name="rev[]"></td></tr>
 <?php 
 }?>
 </table>
 </div>
-<center><a href="admin.php" class="btn btn-primary">ADD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="REMOVE" name="remove" class="btn btn-danger"></center>
+<center><a href="add_assets.php" class="btn btn-primary">ADD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="REMOVE" name="remove" class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="admin_update.php" class="btn btn-success">UPDATE</a></center>
 </form>
 </body>
 </html>

@@ -1,8 +1,12 @@
 <?php
+session_start();
 if(!isset($_POST['productId'])) 
 	header("location:homepage.php");
 $pid = $_POST["productId"];
-
+if(isset($_SESSION['username']))
+{
+	$u=$_SESSION['username'];
+}
 //------------------------------------------------------database connection---------------------------------------
 
 
@@ -72,7 +76,7 @@ $description = $prod[5];
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>

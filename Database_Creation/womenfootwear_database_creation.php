@@ -3,9 +3,9 @@ create table womenfootwear(productId varchar(20) primary key, image varchar(200)
 insert into womenfootwear values("wfwc1p1ss", "assets/25.jpeg", "Shuberry Heels Sandal", "2500", "S", "11cm High Heels Nude Colour Leather Shoe high heels crystal plein.", "Heels");
 insert into womenfootwear values("wfwc1p1sm", "assets/25.jpeg", "Shuberry Heels Sandal", "2500", "M", "11cm High Heels Nude Colour Leather Shoe high heels crystal plein.", "Heels");
 insert into womenfootwear values("wfwc1p1sl", "assets/25.jpeg", "Shuberry Heels Sandal", "2500", "L", "11cm High Heels Nude Colour Leather Shoe high heels crystal plein.", "Heels");
-insert into womenfootwear values("wfwc1p2ss", "assets/26.jpeg", "Shuberry Heels Sandal", "2800", "S", "Shuberry Women Olive Heels Sandal.", "Heels");
-insert into womenfootwear values("wfwc1p2sm", "assets/26.jpeg", "Shuberry Heels Sandal", "2800", "M", "Shuberry Women Olive Heels Sandal.", "Heels");
-insert into womenfootwear values("wfwc1p2sl", "assets/26.jpeg", "Shuberry Heels Sandal", "2800", "L", "Shuberry Women Olive Heels Sandal.", "Heels");
+insert into womenfootwear values("wfwc1p2ss", "assets/26.jpeg", "Shuberry Heels Sandals", "2800", "S", "Shuberry Women Olive Heels Sandal.", "Heels");
+insert into womenfootwear values("wfwc1p2sm", "assets/26.jpeg", "Shuberry Heels Sandals", "2800", "M", "Shuberry Women Olive Heels Sandal.", "Heels");
+insert into womenfootwear values("wfwc1p2sl", "assets/26.jpeg", "Shuberry Heels Sandals", "2800", "L", "Shuberry Women Olive Heels Sandal.", "Heels");
 insert into womenfootwear values("wfwc1p3ss", "assets/27.jpeg", "Shuberry Women Tan Heels Sandal", "2000", "S", "Strap Heels Platform Sandals Party Shoes For Women Wedding Pumps 16cm High Heels .", "Heels");
 insert into womenfootwear values("wfwc1p3sm", "assets/27.jpeg", "Shuberry Women Tan Heels Sandal", "2000", "M", "Strap Heels Platform Sandals Party Shoes For Women Wedding Pumps 16cm High Heels .", "Heels");
 insert into womenfootwear values("wfwc1p3sl", "assets/27.jpeg", "Shuberry Women Tan Heels Sandal", "2000", "L", "Strap Heels Platform Sandals Party Shoes For Women Wedding Pumps 16cm High Heels .", "Heels");

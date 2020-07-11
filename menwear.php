@@ -1,3 +1,13 @@
+<?php
+//-------------------------------------------------------------database connection-------------------------------------------
+include("backend/database_connection.php");
+session_start();
+if(isset($_SESSION['username']))
+{
+	$u=$_SESSION['username'];
+}
+?>
+
  <!--HTML5 DECLARARTION-->
   <!DOCTYPE>
   <html lang="en" dir="ltr">
@@ -40,7 +50,7 @@
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -103,7 +113,26 @@
 
     <br>
     <br>
+<?php
 
+$same="";
+$name="";
+$c=1;
+$d=1;
+$sel="select * from menwear";
+$cat=$con->query($sel);
+while($rw=$cat->fetch_array())
+{
+	if ($d!=$c)
+	{
+		$d=$d+1;
+	}
+	else
+	{
+	if ($same!=$rw[2])
+	{
+		$same=$rw[2];
+	?>
 
 
 
@@ -116,271 +145,54 @@
 
   <div class="alert text-light" align="center" role="alert">
 
-    <h3 style="color:hsl(355, 44%, 22%)"><i><b>T-Shirts</b></i></h3>
+    <h3 style="color:hsl(355, 44%, 22%)"><i><b><?php echo $rw[6]; ?></b></i></h3>
     </div>
     <br>
     <br>
 
 
     <div class="row">
+	<?php 
+	}
+	$st="select * from menwear where category='$rw[6]'";
+	$sametab=$con->query($st);
+	$e=0;
+	while($rww=$sametab->fetch_array())
+	{
+		$c=$c+1;
+	if($name!=$rww[2])
+	{
+		$name=$rww[2];
+		$e=$e+1;
+		?>
       <div class="col-md-4">
 
     <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
 
-      <img class="card-img-top img-fluid img-thumbnail" height="20"src="assets/13.jpeg">
+      <img class="card-img-top img-fluid img-thumbnail" height="20"src="<?php echo $rww[1]; ?>">
       <div class="card-body">
-        <h5 class="card-title">Solid Men Hooded Black T-Shirt</h5>
-        <p class="card-text">Liseaven Men T Shirt Man Long Sleeve Tshirt Solid Men Hooded Neck Black T-Shirt.</p>
+        <h5 class="card-title"><?php echo $rww[2]; ?></h5>
+        <p class="card-text"><?php echo $rww[5]; ?></p>
         <div class="container">
 		<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc1p1sm" name="productId"> View Item </button>
+ 			<button class="btn btn-dark" type="submit" value="<?php echo $rww[0]; ?>" name="productId"> View Item </button>
  		  </form>
           </div>
       </div>
     </div>
     </div>
-
-    <div class="col-md-4">
-
-    <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:38rem;">
-      <img class="card-img-top img-fluid img-thumbnail" src="assets/14.jpeg">
-      <div class="card-body">
-        <h5 class="card-title">Color Block Men Hoody</h5>
-        <p class="card-text">Fashion Men Brand Casual Men Sweatshirt Solid Color Hoodie Jaskets Male Hoodies.</p>
-        <div class="container">
-		<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="mwc1p2sm" name="productId"> View Item </button>
-
- 		  </form>
-          </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-
-  <div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-    <img class="card-img-top img-fluid img-thumbnail" src="assets/15.jpeg">
-    <div class="card-body">
-      <h5 class="card-title">Solid Men Round Neck Red T-Shirt</h5>
-      <p class="card-text">The purple tree Men's Printed Cotton T-Shirt - 1 pc, Printed Cotton Tshirt for Men, Men Tshirt, Tshirt.</p>
-      <div class="container">
-	  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc1p3sm" name="productId"> View Item </button>
- 		  </form>
-        </div>
-    </div>
-  </div>
+<?php 
+	}
+	if($e%3==0)
+	{
+		?><br>
+<?php
+	}
+	}
+	}?>
 </div>
-
-</div>
-
-</div>
-
-
-
-
-<div class="alert alert-light" role="alert">
-
-<div class="alert text-light" align="center" role="alert">
-
-  <h3 style="color:hsl(355, 44%, 22%)"><i><b>Shirts</b></i></h3>
-  </div>
-<br>
-
-
-
-<div class="row">
-  <div class="col-md-4">
-
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-  <a href="#"><img class="card-img-top img-fluid img-thumbnail" src="assets/16.jpeg" ></a>
-  <div class="card-body">
-    <h5 class="card-title">Men Printed Formal Spread Shirt</h5>
-    <p class="card-text">Off Road Military Fashion Handsome Style Slim Fit Cotton Long-sleeved Men Shirt - Khaki M.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc2p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/17.jpeg" >
-  <div class="card-body">
-    <h5 class="card-title">Men Solid Formal Spread Shirt</h5>
-    <p class="card-text">Fashion Mesh Mens See Through Shirts Men Shirt Silk Sexy Floral Men's Casual Shirt long Sleeve Man Shirts Slim Fit Designer Dress. </p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="mwc2p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/18.jpeg">
-<div class="card-body">
-  <h5 class="card-title">Men Self Design Formal Spread Shirt</h5>
-  <p class="card-text">Men's White Oxford Shirt in Stretch New Men's Shirts men Casual slim fit designer Print Camisa red/khaki/white/green Asian.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc2p3sm" name="productId"> View Item </button>
- 		  </form>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="alert alert-light" role="alert">
-
-<div class="alert text-light" align="center" role="alert">
-
-  <h3 style="color:hsl(355, 44%, 22%)"><i><b>Trousers</b></i></h3>
-  </div>
-<br>
-
-
-
-<div class="row">
-  <div class="col-md-4">
-
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/19.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">Regular Fit Men Grey Cotton Blend Trousers</h5>
-    <p class="card-text">Get the perfect blend of comfort and style by wearing these grey textured Slim Fit trousers from Allen Solly by Allen Solly..</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc3p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/20.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">Peter England Blend Trousers</h5>
-    <p class="card-text">Slim Fit Men Dark Blue Polyester Viscose Blend Trousers Regular Fit Men Pure Cotton Dark Blue Pure Cotton Trousers Regular Fit Men White Trousers.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="mwc3p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/21.jpeg">
-<div class="card-body">
-  <h5 class="card-title">Raymond Blend Trousers </h5>
-  <p class="card-text"> Raymond Slim Fit Men Blue Polyester Blend Trousers Slim Fit Men Black Cotton Blend Trousers Brooklyn Slim Fit Men Beige Cotton Linen Blend Trousers.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc3p3sm" name="productId"> View Item </button>
- 		  </form>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<div class="alert alert-light" role="alert">
-<div class="alert text-light" align="center" role="alert">
-
-  <h3 style="color:hsl(355, 44%, 22%)"><i><b>Kurta</b></i></h3>
-  </div>
-<br>
-<div class="row">
-  <div class="col-md-4">
-
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/22.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">COBIO MAN black Kurta</h5>
-    <p class="card-text">COBIO MAN Men Solid Cotton Blend Asymmetric Kurta (Black).</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc4p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/23.jpeg">
-  <div class="card-body">
-    <h5 class="card-title">BENSTOKE Kurta</h5>
-    <p class="card-text">BENSTOKE Men Solid Cotton Blend Frontslit Kurta (Orange) Men Solid Cotton Blend Asymmetric Kurta</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="mwc4p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:38rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/24.jpeg" >
-<div class="card-body">
-  <h5 class="card-title">VERO LIE Kurta</h5>
-  <p class="card-text">VERO LIE Men Solid Cotton Blend Straight Kurta (Light Blue) Men Solid Cotton Linen Blend Straight Kurta.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="mwc4p3sm" name="productId"> View Item </button>
- 		  </form>
-  </div>
-</div>
-</div>
-</div>
+<?php
+}?>
 </div>
 </div>
 </div>

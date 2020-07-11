@@ -1,3 +1,13 @@
+<?php
+//-------------------------------------------------------------database connection-------------------------------------------
+include("backend/database_connection.php");
+session_start();
+if(isset($_SESSION['username']))
+{
+	$u=$_SESSION['username'];
+}
+?>
+
  <!--HTML5 DECLARARTION-->
   <!DOCTYPE>
   <html lang="en" dir="ltr">
@@ -39,7 +49,7 @@
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -101,14 +111,33 @@
 
 
  <!-- <div class="container"> -->
+<?php
 
+$same="";
+$name="";
+$c=1;
+$d=1;
+$sel="select * from womenwear";
+$cat=$con->query($sel);
+while($rw=$cat->fetch_array())
+{
+	if ($d!=$c)
+	{
+		$d=$d+1;
+	}
+	else
+	{
+	if ($same!=$rw[2])
+	{
+		$same=$rw[2];
+	?>
 
 
 
   <div class="alert alert-light" role="alert">
 
     <div class="alert text-light" align="center" role="alert">
-      <h3 style="color:hsl(355, 44%, 22%)"><i><b>Dresses</b></i></h3>
+      <h3 style="color:hsl(355, 44%, 22%)"><i><b><?php echo $rw[6]; ?></b></i></h3>
       </div>
        <br>
        <br>
@@ -120,271 +149,49 @@
 
 
     <div class="row">
+	<?php 
+	}
+	$st="select * from womenwear where category='$rw[6]'";
+	$sametab=$con->query($st);
+	$e=0;
+	while($rww=$sametab->fetch_array())
+	{
+		$c=$c+1;
+	if($name!=$rww[2])
+	{
+		$name=$rww[2];
+		$e=$e+1;
+		?>
       <div class="col-md-4">
 
 
-    <div class="card mrcard text-white bg-light mb-3 mx-auto" style="width: 15rem; height:40rem;">
-      <img class="card-img-top img-fluid img-thumbnail" src="assets/11.jpeg" height="10%">
+    <div class="card mrcard text-white bg-light mb-3 mx-auto" style="width: 15rem; height:42rem;">
+      <img class="card-img-top img-fluid img-thumbnail" src="<?php echo $rww[1]; ?>" height="10%">
       <div class="card-body">
-        <h5 class="card-title text-dark">Mini Dress</h5>
-        <p class="card-text text-dark">Floral Print Dress Casual Cute Solid V Neck Dalmatian Ruffle Trim Tie Boho Beach High Waist Mini Dresses Women Fit and Flare Multicolor Dress.</p>
+        <h5 class="card-title text-dark"><?php echo $rww[2]; ?></h5>
+        <p class="card-text text-dark"><?php echo $rww[5]; ?></p>
 
         <div class="container">
           <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc1p1sm" name="productId"> View Item </button>
+ 			<button class="btn btn-dark" type="submit" value="<?php echo $rww[0]; ?>" name="productId"> View Item </button>
  		  </form>
           </div>
       </div>
     </div>
     </div>
-
-    <div class="col-md-4">
-
-    <div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-      <img class="card-img-top img-fluid img-thumbnail" src="assets/12.jpeg" height="600" >
-      <div class="card-body">
-        <h5 class="card-title">Vacation Halter Printed Sleeveless Dress</h5>
-        <p class="card-text">Halter neck style sleeveless detachable waist gathered tiered skirt panels invisible back zip neck opening.</p>
-        <div class="container">
-		<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="wwc1p2sm" name="productId"> View Item </button>
-
- 		  </form>
-          </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-
-  <div class="card mrcard text-white bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
-    <img class="card-img-top img-fluid img-thumbnail" src="assets/1.jpeg" >
-    <div class="card-body">
-      <h5 class="card-title text-dark">Selous Slip Mini Dress</h5>
-      <p class="card-text text-dark">The Selous Slip Mini Dress Blue Daisy was made for a night out with the girls!! This mini dress will have you feeling fun and fresh on a warm summer's night.</p>
-
-      <div class="container">
-	  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc1p3sm" name="productId"> View Item </button>
- 		  </form>
-        </div>
-    </div>
-  </div>
+<?php 
+	}
+	if($e%3==0)
+	{
+		?><br>
+<?php
+	}
+	}
+	}?>
+    
 </div>
-
-</div>
-
-</div>
-
-
-
-
-<div class="alert alert-light" role="alert">
-  <div class="alert text-danger" align="center" role="alert">
-    <h3 style="color:hsl(355, 44%, 22%)"><i><b>Tops</b></i></h3>
-    </div>
-     <br>
-
-
-
-<br>
-
-
-
-<div class="row">
-  <div class="col-md-4">
-
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:45rem;">
-
-  <a href="#"><img class="card-img-top img-fluid img-thumbnail" src="assets/8.jpg"></a>
-  <div class="card-body">
-    <h5 class="card-title">Cut Out Crop Tank Top</h5>
-    <p class="card-text">Dazzle this summer with this striped blue crop top from People. Crafted from pure cotton, this design features noodle straps. Team it with shorts and flats for a chic look .</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc2p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:45rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/9.jpg">
-  <div class="card-body">
-    <h5 class="card-title">Mint for Spring – The Cutest Eyelet Top!</h5>
-    <p class="card-text">It feels so fresh and happy especially when paired with white. This outfit is perfect for so many occasions Backless Printed Halter Dress For Vacation in Green.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="wwc2p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:45rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/10.jpg">
-<div class="card-body">
-  <h5 class="card-title">Macy Fit And Flare Wrap Top Blue</h5>
-  <p class="card-text">Featuring long bishop style sleeves, V-neckline that wraps under the bust and fastens with a ribbon tie at the side Print Cold Shoulder Top.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc2p3sm" name="productId"> View Item </button>
- 		  </form>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<div class="alert alert-light" role="alert">
-
-  <div class="alert text-danger" align="center" role="alert">
-    <h3 style="color:hsl(355, 44%, 22%)"><i><b>Ethnic</b></i></h3>
-    </div>
-     <br>
-     <br>
-
-<br>
-
-
-
-<div class="row">
-  <div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/2.jpg">
-  <div class="card-body">
-    <h5 class="card-title">Golden Bordered Peach Chakori Saree</h5>
-    <p class="card-text">Collection of the Latest Banarasi Sarees to amp up your saree game Chakori Ethnic Chanderi Saree.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc3p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/3.jpg">
-  <div class="card-body">
-    <h5 class="card-title">Ruffled Saree</h5>
-    <p class="card-text">Steal the show with these gorgeous ruffled sarees. Ruffled saree ideas for wedding and more inspirations for wedding.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="wwc3p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/4.jpg">
-<div class="card-body">
-  <h5 class="card-title">Gulzar Feriha Kurta </h5>
-  <p class="card-text"> Adorned with tones of blue and green against the serenity of white, it comes embellished with delicate sequins work on the yoke.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc3p3sm" name="productId"> View Item </button>
- 		  </form>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<div class="alert alert-light" role="alert">
-  <div class="alert text-danger" align="center" role="alert">
-    <h3 style="color:hsl(355, 44%, 22%)"><i><b>Trousers</b></i></h3>
-    </div>
-     <br>
-     <br>
-
-<br>
-<div class="row">
-  <div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/5.jpg">
-  <div class="card-body">
-    <h5 class="card-title">Cobain Pants</h5>
-    <p class="card-text"> Lightweight suiting Optional chain accent Houndstooth plaid pattern pants.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc4p1sm" name="productId"> View Item </button>
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card mrcard text-white bg-dark mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-  <img class="card-img-top img-fluid img-thumbnail" src="assets/7.jpg">
-  <div class="card-body">
-    <h5 class="card-title">Ribbon design Pants</h5>
-    <p class="card-text">This pants feature a side pockets and letter print design.amde by natural synthetic comfortable design.</p>
-    <div class="container">
-	<form action="product.php" method="POST">
-
- 			<button class="btn btn-light" type="submit" value="wwc4p2sm" name="productId"> View Item </button>
-
- 		  </form>
-      </div>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-
-<div class="card mrcard text-dark bg-light mb-3 mx-auto" style="width: 15rem;height:40rem;">
-
-<img class="card-img-top img-fluid img-thumbnail" src="assets/6.jpg" >
-<div class="card-body">
-  <h5 class="card-title">Streatwear Jumpsuit</h5>
-  <p class="card-text">Red Camouflage Print Pockets Camo High Waisted Streetwear Long Jumpsuit High-Rise Checked Pants.</p>
-  <div class="container">
-  <form action="product.php" method="POST">
- 			<button class="btn btn-dark" type="submit" value="wwc4p3sm" name="productId"> View Item </button>
- 		  </form>
-  </div>
-</div>
-</div>
-</div>
+<?php
+}?>
 </div>
 </div>
 </div>

@@ -1,17 +1,17 @@
 <?php
 session_start();
-//---------------------------------------------------form value----------------------------------
+//---------------------------------------------------from value----------------------------------
 
 $c = $_POST['catg'];
 $n = $_POST['n'];
+$sc = $_POST['subcat'];
 $pi = $_POST['pi'];
 $f = $_FILES['file'];
 $p = $_POST['price'];
 $s = $_POST['size'];
-$q = $_POST['quanty'];
 $d = $_POST['des'];
  
-
+ 
 //---------------------------------------Extracting file type---------------------------------------
 $fname= $f['name'];
 $fext =explode('.',$fname);
@@ -21,8 +21,8 @@ $reqtype= array('jpeg', 'jpg' , 'png');
 
 if(in_array($ftype,$reqtype))
 {
-	$fileurl = '../assets/'.$fname;
-	move_uploaded_file($f['tmp_name'],$fileurl);
+	$fileurl = 'assets/'.$fname;
+	move_uploaded_file($f['tmp_name'],'../'.$fileurl);
 }	
 
 
@@ -31,7 +31,7 @@ if(in_array($ftype,$reqtype))
 
 include("database_connection.php");
 //-----------------------------------------upload on database------------------------------------ 
-$save= "insert into $c values('$pi','$fileurl','$n','$p','$s','$q','$d')";
+$save= "insert into $c values('$pi','$fileurl','$n','$p','$s','$d','$sc')";
 
 if($con->query($save))
 {
@@ -42,6 +42,5 @@ else
 {
 	echo "insertion failed".$con->error;
 }
-
 
 ?>

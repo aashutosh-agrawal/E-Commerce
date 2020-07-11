@@ -1,3 +1,13 @@
+<?php
+//-------------------------------------------------------------database connection-------------------------------------------
+include("backend/database_connection.php");
+session_start();
+if(isset($_SESSION['username']))
+{
+	$u=$_SESSION['username'];
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,7 +40,7 @@
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>

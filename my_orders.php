@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(!isset($_SESSION["username"])) 
+	header("location:login.php");
+else {
+	include("backend/database_connection.php");
+
+	$u = $_SESSION["username"];
+?>
 <!--HTML5 DECLARARTION-->
   <!DOCTYPE>
   <html lang="en" dir="ltr">
@@ -40,7 +50,7 @@
 
                <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link" href="<?php if(!isset($_SESSION['username'])){ echo 'login.php';} else if($u=='admin'){ echo 'admin_profile.php';} else{ echo 'profile.php';}?>">
                               <img src="assets/log.png" width="30" height="30"/>
                           </a>
                       </li>
@@ -93,17 +103,14 @@
 	<div class="container">
 
 <?php
+	if(!isset($_GET['page'])) {$page=1;}
+		else {$page= $_GET['page'];}
 
-session_start();
-if(!isset($_SESSION["username"]))
-	header("location:login.php");
-else {
-	include("backend/database_connection.php");
-
-	$u = $_SESSION["username"];
-	$orders = $con->query("SELECT * from orders_log where username = '$u' ");
+		$lowerlimit= ($page-1)*10;
+		$noofrow= 10;
+	$orders = $con->query("SELECT * from orders_log where username = '$u' limit $lowerlimit,$noofrow");
 	if(mysqli_num_rows($orders) > 0) {
-	while($order = mysqli_fetch_array($orders)) {
+		while($order = mysqli_fetch_array($orders)) {
 		$pid = $order[2];
 		//figure out product table
 		$temp = " ".$pid;
@@ -136,12 +143,23 @@ else {
 		</div>
 		</div>
 
-<?php
+<?php 
+	}
+	$s2= "select * from orders_log";
+		   $result1= $con->query($s2);
+           $page = ceil($result1->num_rows/$noofrow);
+?>
+<center>
+<?php		   
+		   for($i=1;$i<=$page;$i++)
+		   { ?>
+	      <a href= "my_orders.php?page=<?php echo $i; ?>"><?php echo $i;?> </a>
+		  <?php
 	}
 	}
 	else {
 
-?>
+?></center>
 
 		<br>
 		<div class="alert text-info" align="center" role="alert">
