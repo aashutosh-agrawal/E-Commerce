@@ -1,9 +1,9 @@
 <?php
 //-----------------------------------------------database connection---------------------------------------
-$hostname="localhost";
-$un="id14316697_ecomdata";
-$pass="FSWDproj@1111";
-$dbname="id14316697_ecommerce";
+$hostname="sql12.freemysqlhosting.net";
+$un="sql12354134";
+$pass="npj57NKaM4";
+$dbname="sql12354134";
 
 //----------------------------------------connecting database using php----------------------------------------
 $con=new mysqli($hostname,$un,$pass,$dbname);
