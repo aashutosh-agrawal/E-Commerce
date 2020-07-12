@@ -92,7 +92,7 @@ else {
 
 
     <nav class="navbar navbar-light bg-dark justify-content-between ">
-      <a class="navbar-brand mx-auto text-light" href="Homepage.php"><b>Home</b></a>
+      <a class="navbar-brand mx-auto text-light" href="homepage.php"><b>Home</b></a>
     <a class="navbar-brand mx-auto text-light" href="menwear.php"><b>Men's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="womenwear.php"><b>Women's Wear</b></a>
       <a class="navbar-brand mx-auto text-light" href="kidswear.php"><b>Kid's Wear</b></a>

@@ -38,7 +38,7 @@ else
 //---------------------------------------encrypting password------------------------------------
 $ep = md5($p);
 //----------------------------------------inserting values---------------------------------------
-$s1="insert into Users(name,username,email,mobileno,password) values('$n','$u','$e','$m','$ep')";
+$s1="insert into users(name,username,email,mobileno,password) values('$n','$u','$e','$m','$ep')";
 if($con->query($s1))
 {
 //---------------------------------------------inserting in login-----------------------------------------
