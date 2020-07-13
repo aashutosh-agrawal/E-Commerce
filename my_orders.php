@@ -145,7 +145,7 @@ else {
 
 <?php 
 	}
-	$s2= "select * from orders_log";
+	$s2= "select * from orders_log where username='$u'";
 		   $result1= $con->query($s2);
            $page = ceil($result1->num_rows/$noofrow);
 ?>
