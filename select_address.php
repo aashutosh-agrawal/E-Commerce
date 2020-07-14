@@ -128,7 +128,7 @@ else {
 			<!-- This prints the saved addresses if available -->
 			<div class="alert alert-dark" role="alert" style="margin-top: 30px">	
 			
-			<input type="radio" value="<?php echo $adr[0]; ?>" name="address" form="proceed">
+			<input type="radio" value="<?php echo $adr[0]; ?>" name="address" form="proceed" required>
 				<table>
 				<div class="text-center">
 					<tr><td>Name: </td><td><?php echo $adr[2]; ?>   </td></tr>
