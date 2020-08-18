@@ -29,16 +29,22 @@ session_start();
 
                             <label for="name" class="label">Name</label></br>
                             <input id="name" type="text" placeholder="Name" class="user-input" name="name" required ></br>
+							<div id = "name_err" style="color:red;"></div>
                             <label for="username" class="label">Users name</label></br>
                             <input id="username" type="text" placeholder="Username" class="user-input" name="username" required></br>
+							<div id = "username_err" style="color:red;"></div>
                             <label for="email" class="label">Email</label></br>
                             <input id="email" type="email" placeholder="Email" class="user-input"  name="email" required></br>
+							<div id = "email_err" style="color:red;"></div>
                             <label for="mobileno" class="label">Mobile No.</label></br>
                             <input id="mobileno" type="text" placeholder="Mobile No." class="user-input" name="mobileno" required></br>
+							<div id = "mob_err" style="color:red;"></div>
                             <label for="password" class="label">Password</label></br>
                             <input id="password" type="password" placeholder="Password" class="user-input" name="password" required></br>
+							<div id = "pass_err" style="color:red;"></div>
                             <label for="confirmpassword" class="label">Confirm Password</label></br>
                             <input id="confirmpassword" type="password" placeholder="Confirm Password" class="user-input" name = "confirmpassword" required></br>
+							<div id = "cnfpass_err" style="color:red;"></div>
                              <a href="login.php" id="">Have an Account?</a></br>
 							 <p style="color:red;"><?php 
 									   if(isset($_SESSION['err']))
@@ -61,11 +67,20 @@ session_start();
 
 	<script>
 
+		function clear_errors() {
+			document.getElementById("name_err").innerHTML = "";
+			document.getElementById("username_err").innerHTML = "";
+			document.getElementById("email_err").innerHTML = "";
+			document.getElementById("mob_err").innerHTML = "";
+			document.getElementById("pass_err").innerHTML = "";
+			document.getElementById("cnfpass_err").innerHTML = "";
+		}
 		function validateName() {
 			var name = document.getElementById("name").value;
 			var pattern = /^[a-zA-Z ]{3,30}$/;
 			if(!name.match(pattern)) {
-				console.log("Please enter a valid name. ex - James Bond");
+				clear_errors();
+				document.getElementById("name_err").innerHTML = "Please enter a valid name. ex - James Bond";
 				return false;
 			}
 			return true;
@@ -74,7 +89,8 @@ session_start();
 			var username = document.getElementById("username").value;
 			var pattern = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{3,20}$/;
 			if(!username.match(pattern)) {
-				console.log("Please enter a valid username. ex - jbond007");
+				clear_errors();
+				document.getElementById("username_err").innerHTML = "Please enter a valid username. ex - jbond007";
 				return false;
 			}
 			return true;
@@ -83,7 +99,8 @@ session_start();
 			var email = document.getElementById("email").value;
 			var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			if(!email.match(pattern)) {
-				console.log("Please enter a valid email. ex - jbond7@gmail.com");
+				clear_errors();
+				document.getElementById("email_err").innerHTML = "Please enter a valid email. ex - jbond7@gmail.com";
 				return false;
 			}
 			return true;
@@ -92,7 +109,8 @@ session_start();
 			var mobile = document.getElementById("mobileno").value;
 			var pattern = /^\d{10}$/;
 			if(!mobile.match(pattern)) {
-				console.log("Please enter a valid 10 digit Mobile No. ex - 9912XXXX89");
+				clear_errors();
+				document.getElementById("mob_err").innerHTML = "Please enter a valid 10 digit Mobile No. ex - 9912XXXX89";
 				return false;
 			}
 			return true;
@@ -101,8 +119,8 @@ session_start();
 			var password = document.getElementById("password").value;
 			var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 			if(!password.match(pattern)) {
-				//console.log("Password must be of length 8-15 containing a small letter, a capital letter, a digit and a special character");
-				console.log("Please set a strong password ex - James@007");
+				clear_errors();
+				document.getElementById("pass_err").innerHTML = "Password must be of length 8-15 containing a small letter, a capital letter, a digit and a special character ex - James@007";
 				return false;
 			}
 			return true;
@@ -111,7 +129,8 @@ session_start();
 			var confirmpassword = document.getElementById("confirmpassword").value;
 			var password = document.getElementById("password").value;
 			if(password != confirmpassword) {
-				console.log("Password and Confirm Password do not match");
+				clear_errors();
+				document.getElementById("cnfpass_err").innerHTML = "Password and Confirm Password do not match";
 				return false;
 			}
 			return true;
